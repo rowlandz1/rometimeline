@@ -12,6 +12,11 @@ function draw() {
   canvas = document.getElementById('canvas');
   canvas.width = renderInfo.widthPx;
   canvas.height = renderInfo.heightPx;
+  canvas.onclick = handleMouseClick;
+  canvas.onmousemove = handleMouseMove;
+  canvas.style.position = "absolute";
+  canvas.style.left = "0px";
+  canvas.style.top = "0px";
   intervals2pixels = canvas.width / (eventsInfo.end - eventsInfo.start);
 
   if (canvas.getContext == undefined) return;
@@ -125,6 +130,9 @@ function drawIntervalEvent(evnt, yPx, labelstyle) {
     ctx.fillStyle = 'white';
     ctx.fillText(evnt.name, evntPxStart + 4, yPx + 16, evntPxLength - 8);
   }
+
+  // make invisible button
+  addButton(evntPxStart, yPx, evntPxLength, renderInfo.eventHeightPx, evnt.name);
 }
 
 function drawEvents(evnts, pointYPx, stalkPx) {
@@ -179,4 +187,32 @@ function drawLabel(text, x, y, textWidth=0) {
   fillRoundedRect(ctx, x - 4, y - 14, textWidth + 8, 18, 9);
   ctx.fillStyle = 'black';
   ctx.fillText(text, x, y);
+}
+
+function handleMouseClick(e) {
+  //console.log(e.offsetX + " " + e.offsetY);
+}
+
+function handleMouseMove(e) {
+
+}
+
+function addButton(x, y, width, height, eventName) {
+  var b = document.createElement('button');
+  b.onclick = function() {
+    var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; });
+    var descrLabel = document.getElementById('descr-label');
+    descrLabel.style.left = x+'px';
+    descrLabel.style.top = (y+height)+'px';
+    descrLabel.style.backgroundColor = 'white';
+    descrLabel.innerHTML = `<u>${evnt.name}</u> (${evnt.start} - ${evnt.end})<br>${evnt.descr}`;
+  };
+  b.style.backgroundColor = 'transparent';
+  b.style.border = 'transparent';
+  b.style.position = 'absolute';
+  b.style.left = x+'px';
+  b.style.top = y+'px';
+  b.style.width = width+'px';
+  b.style.height = height+'px';
+  document.body.appendChild(b);
 }

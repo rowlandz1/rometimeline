@@ -406,7 +406,36 @@ var eventsInfo = {
       "name"  : "Diocletian",
       "start" : 284,
       "end"   : 305,
-      "color" : "#7851A9"
+      "color" : "#7851A9",
+      "descr" : "The reforms of the charismatic Diocletian lifted the empire out of the crisis era.\
+      His vision was to restore the empire's glory by reshaping its every institution.<br>\
+      <b>Administrative/Military Reforms</b> Diocletian sought to restore political stability by\
+      distributing administrative and military duties amongst more officials, thereby allowing\
+      specilization and preventing power amalgamation.\
+      <ul>\
+      <li>Established the Tetrarchy and voluntarily abdicated the throne, setting a\
+          precedent of peaceful sharing and relinquishing of imperial power</li>\
+      <li>Doubled the size of the imperial bureaucracy</li>\
+      <li>Doubled the number of provinces, and grouped them into dioceses</li>\
+      <li>Separated civilian and military government positions, such as establishing\
+          the position of dux--the military commander in a province</li>\
+      <li>Emphasized smaller and more mobile vexillation over the legion as the\
+          primary military unit for patrolling the northern frontiers</li>\
+      </ul>\
+      <b>Economic Reforms</b> His economic reforms aimed to fund the army and bureaucracy\
+      despite coin-debasement and inflation. He abandoned monetary taxation in favor of\
+      direct payment of raw goods. His Edict on Prices attempted to curb inflation by\
+      tabulating for each marketable good a maximum prices. However, the edict was\
+      unenforceable and was abandoned after his abdication.<br>\
+      <b>Imperial Image</b> Hy styled the emperorship as a divinely appointed position\
+      to remove the ever-shifting allegiance of the army as the source of imperial legitimacy.\
+      This shift in perception from \"first among equals\" to \"lord and master\" typically\
+      marks the boundary between the Principate and Dominate forms of government.<br>\
+      <b>Religious Persecutions</b> In 303, he ordered the persecution of Christians and\
+      Manichaeans from fear that the pagan gods would turn their backs on Rome. However,\
+      by this time, Christianity was too established and had too much sympathy to justify\
+      the appalling measures taken to stamp it out.\
+      "
     },
     {
       "name"  : "Constantine",
@@ -418,7 +447,20 @@ var eventsInfo = {
       "name"  : "Gothic War",
       "start" : 376,
       "end"   : 382,
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "descr" : "In 376, a hoard of Goths crossed the Danube seeking refuge from the Huns.\
+      After enduring harassment from local Roman leaders, they revolted and began rampaging\
+      around the Balkans. Emperor Valens and the eastern army eventually confronted them in 378.\
+      The ensuing Battle of Adrianople resulted in overwhelming victory for the Goths, whose\
+      unaccounted-for cavalry surrounded and slaughtered Valens and two-thirds of the veteran\
+      eastern army. What followed was a war of attrition as Gothic forces proved unable to\
+      capture the heavily fortified Roman cities and the crippled Roman army was no match for\
+      the Goths in open combat. In 382, breaking from centuries-old Roman foreign policy, the\
+      Goths were allowed to remain on Roman territory as a unified nation with fragile loyalty\
+      to Rome.<br><br>\
+      The Gothic War marks when the Roman legions, long suffering from manpower shortages, began\
+      to have serious problems defending the empire from hostile barbarians and internal\
+      political usurpers."
     },
     {
       "name"  : "Theodosius",
