@@ -18,3 +18,21 @@ function drawRoundedRect(ctx, x, y, width, height, radius) {
   ctx.arcTo(x, y, x, y + radius, radius);
   ctx.stroke();
 }
+
+function partition(lst, getGroup) {
+  var ret = {};
+  for (var x of lst) {
+    var g = String(getGroup(x));
+    if (g in ret)
+      ret[g].push(x);
+    else
+      ret[g] = [x];
+  }
+  return ret;
+}
+
+function year2string(date) {
+  if (date < 0) return `${-date} BC`;
+  if (date > 0) return `${date} AD`;
+  return "1 AD";
+}

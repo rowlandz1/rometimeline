@@ -32,9 +32,14 @@ function draw() {
     //ctx.drawImage(bgimg, 0, 0, canvas.width, canvas.height);
     //ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
     //ctx.fillRect(0, 0, canvas.width, canvas.height);
-    drawMainLine(eventsInfo, canvas.height / 2);
-    drawIntervalEvents(eventsInfo.intervalEvents, canvas.height/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
-    drawEvents(eventsInfo.events, canvas.height / 2 - 8, 50);
+    drawMainLine(eventsInfo, canvas.height / 3);
+    var partitionedEvents = partition(eventsInfo.intervalEvents, (e) => {return e.group;});
+    var yPx = canvas.height/3 + renderInfo.eventHeightPx/2 + 5;
+    for (var group of eventsInfo.groupOrder) {
+      var h = drawIntervalEvents(partitionedEvents[group], yPx, "align-left");
+      yPx += h;
+    }
+    drawEvents(eventsInfo.events, canvas.height / 3 - 8, 50);
   };
 
   //var re117 = new Image();
@@ -51,26 +56,26 @@ function drawMainLine(line, yPx) {
 
   var x = 0;
   var timeLabel = line.start;
-  ctx.font = '14px Sans';
+  ctx.font = '12px Sans';
 
   while (true) {
     ctx.fillStyle = 'rgb(252, 224, 179)';
     if(x + eraPxSize < canvas.width) {
       ctx.fillRect(x, topPx, eraPxSize, renderInfo.eventHeightPx);
-      drawLabel(String(timeLabel), x+3, textYPx);
+      drawLabel(year2string(timeLabel), x+3, textYPx);
       x += eraPxSize;
       timeLabel += line.eraSize;
     } else { break; }
     ctx.fillStyle = 'rgb(209, 173, 116)';
     if(x + eraPxSize < canvas.width) {
       ctx.fillRect(x, topPx, eraPxSize, renderInfo.eventHeightPx);
-      drawLabel(String(timeLabel), x+3, textYPx);
+      drawLabel(year2string(timeLabel), x+3, textYPx);
       x += eraPxSize;
       timeLabel += line.eraSize;
     } else { break; }
   }
   ctx.fillRect(x, topPx, canvas.width - x, renderInfo.eventHeightPx);
-  drawLabel(String(timeLabel), x+3, textYPx);
+  drawLabel(year2string(timeLabel), x+3, textYPx);
 }
 
 // Draw the interval events below the main line. The labelstyle determines how
@@ -81,11 +86,10 @@ function drawMainLine(line, yPx) {
 function drawIntervalEvents(evnts, yPx, labelstyle) {
   if (evnts.length <= 0) return;
   evnts.sort((x, y) => x.start - y.start);  // increasing start time
-  var lanes = [evnts[0].end*intervals2pixels]; // end times (in pixels)
+  var lanes = []; // end times (in pixels)
   var sepPx = renderInfo.eventHeightPx + renderInfo.eventSpacingPx;
 
-  drawIntervalEvent(evnts[0], yPx, labelstyle);
-  for (var i = 1; i < evnts.length; i++) {
+  for (var i = 0; i < evnts.length; i++) {
     var t = 0;
     var evntStartPx = evnts[i].start * intervals2pixels;
     var evntEndPx = evnts[i].end * intervals2pixels;
@@ -107,6 +111,7 @@ function drawIntervalEvents(evnts, yPx, labelstyle) {
     else
       lanes.push(rightBoundary);
   }
+  return lanes.length*sepPx;
 }
 
 function drawIntervalEvent(evnt, yPx, labelstyle) {
@@ -143,18 +148,18 @@ function drawEvents(evnts, pointYPx, stalkPx) {
 
   var textWidth = ctx.measureText(evnts[0].name).width;
   var pointXPx = (evnts[0].when - eventsInfo.start) / timespan * canvas.width;
-  var textXPx = Math.min(pointXPx - 10, canvas.width - textWidth);
+  var textXPx = Math.min(pointXPx - 14, canvas.width - textWidth);
   lanes.push(textXPx);
   drawEvent(evnts[0], pointXPx, pointYPx, textXPx, pointYPx - stalkPx, textWidth);
   for (var i = 1; i < evnts.length; i++) {
-    textWidth = ctx.measureText(evnts[i].name).width;
+    textWidth = ctx.measureText(evnts[i].name).width + 8;
     pointXPx = (evnts[i].when - eventsInfo.start) / timespan * canvas.width;
     textXPx = Math.min(pointXPx - 10, canvas.width - textWidth);
 
     var t = 0;
     while (t < lanes.length && lanes[t] < textWidth + textXPx) t++;
     var textYPx = pointYPx - stalkPx - sepPx*t;
-    drawEvent(evnts[i], pointXPx, pointYPx, textXPx, textYPx, textWidth);
+    drawEvent(evnts[i], pointXPx, pointYPx, textXPx, textYPx, textWidth - 4);
     if (t < lanes.length)
       lanes[t] = textXPx;
     else
@@ -175,8 +180,11 @@ function drawEvent(evnt, pointXPx, pointYPx, textXPx, textYPx, textWidth) {
   ctx.stroke();
 
   ctx.beginPath();
-  ctx.arc(pointXPx, pointYPx, 5, 0, Math.PI * 2, true);
+  ctx.arc(pointXPx, pointYPx, 4, 0, Math.PI * 2, true);
   ctx.stroke();
+
+  // invisible button
+  addButton(textXPx, textYPx - 16, textWidth, 18, evnt.name);
 }
 
 // Draws a label with black text and a semi-transparent white background.
@@ -198,14 +206,22 @@ function handleMouseMove(e) {
 }
 
 function addButton(x, y, width, height, eventName) {
+
+  // find the event specified by eventName
+  var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; });
+  if (!evnt) {
+    evnt = eventsInfo.events.find((e) => { return e.name == eventName; });
+  }
+  var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
+
+  // set up the button
   var b = document.createElement('button');
+  var descrLabel = document.getElementById('descr-label');
   b.onclick = function() {
-    var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; });
-    var descrLabel = document.getElementById('descr-label');
     descrLabel.style.left = x+'px';
     descrLabel.style.top = (y+height)+'px';
     descrLabel.style.backgroundColor = 'white';
-    descrLabel.innerHTML = `<u>${evnt.name}</u> (${evnt.start} - ${evnt.end})<br>${evnt.descr}`;
+    descrLabel.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
   };
   b.style.backgroundColor = 'transparent';
   b.style.border = 'transparent';
