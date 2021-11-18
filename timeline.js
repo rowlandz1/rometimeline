@@ -20,14 +20,18 @@ var eventsInfo = {
   	  on the Palatine Hill that probably date to the mid-eighth century BC seem to justify the traditional\
   	  753 B.C. date for the city's founding as reasonable.<br>\
       <br>\
-  	  According to legend, Rome was founded by Romulus. Romulus and his twin brother Remus were born in Alba\
-  	  Longa of the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
+  	  According to legend, Rome was founded by Romulus who was born with his twin brother Remus in Alba\
+  	  Longa to the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
   	  were abandoned at birth and raised by a she-wolf. As young adults, the twins decided to build a city of\
   	  their own in the area near the Tiber River, but they disagreed on which hill to build it. Romulus\
   	  preferred the Palatine Hill while Remus preferred the Aventine Hill. They decided leave the choice to\
   	  the gods through a contest of augury. Remus first saw six auspicious birds but soon afterward Romulus\
-  	  saw twelve, and claimed to have won divine approval. This new disputed ended when Remus was murdered by\
-  	  Romulus or a supporter. Romulus founded the city and became its first king."
+  	  saw twelve, and claimed to have won divine approval. Remus disagreed with this interpretation, so\
+      Romulus murdered him and founded the city himself.<br>\
+      <br>\
+      The Romans' origin story reveals much of how they understood themselves as a people. They are fighters\
+      at heart, though tempered by religious ritual and superstition. They built civilization from savagery,\
+      greatness from humble beginnings."
     },
     {
       "name" : "Founding of the Republic",
@@ -161,6 +165,15 @@ var eventsInfo = {
       local intelligence and small army detachments."
     },
     {
+      "name" : "Alter of Victory Removed",
+      "when" : 382,
+      "descr" : "The Alter of Victory was a symbol of Roman strength granted by the\
+      favor of the Roman pantheon. In 382, it was taken down at the prodding of Bishop\
+      Ambrose, and to the chagrin of the still-pagan aristocracy of the city of Rome. Many\
+      superstitious Romans would pin the cause of the empire's final decline to the\
+      alter's removal."
+    },
+    {
       "name" : "Massacre of Thessalonica",
       "when" : 390,
       "descr" : "Theodosius ordered a massacre of citizens as retribution for insubordination.\
@@ -202,10 +215,10 @@ var eventsInfo = {
       Vandals under Genseric marched into the province of Africa and captured the city of\
       Carthage. Genseric declared himself the king of a new Vandal Kingdom and embraced the\
       existing inhabitants as his subjects. Neglected by the government in Ravenna, the\
-      surprised, but hopeful Roman Africans accepted their new leadership. The Vandals\
-      held significant leverage over the imperial government because North Africa was the\
-      primary source of grain for Italy. They also reintroduced piracy to the Mediterranean\
-      Sea after centuries of maritime peace."
+      surprised, but hopeful Roman Africans cautiously accepted their new leadership. The\
+      Vandals held significant leverage over the imperial government by engaging in Mediterranian\
+      piracy and threatening to cut off grain exports to Italy. The Vandal Kingdom would last\
+      until the Byzantine conquests under Justinian a hundred years later."
     },
     {
       "name" : "Vandal Sack of Rome",
@@ -393,12 +406,15 @@ var eventsInfo = {
       "end"   : 14,
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "Was 19-year old Gaius Octavius when Caesar died. He was left 3/4 of Caesar's fortune\
-  	  and was adopted by the late leader. He was fragile and prone to sickness, not strong, had over-\
-  	  protective mother. He showed promise in oratory and attracted the right kinds of friends. His\
-  	  mother begged him to not accept his inheritance, but ambitious like his uncle, he did anyway.\
-  	  He was immediately forced into competition with Antony for support of the Senate, legions, and\
-  	  people. <br>\
+      "descr" : "Born Gaius Octavius, Augustus demonstrated remarkable ability in oratory, politics, and\
+      administration during his formative years under the eye of his uncle Julius Caesar. Upon Caesar's\
+      death, his will revealed that he was postumusly adopting the nineteen-year-old Gaius and leaving him\
+      with three-forths of his fortune. Now Gaius Julius Caesar Octavianus, he would soon out-compete Mark\
+      Antony and the anti-Caesarians\
+      for support from the Senate, legions, and citizens to become the most powerful man in Rome. In\
+      27 BC, the Senate granted him the title 'Augustus' making him the first of the people retroactively\
+      called the Roman emperors. His charisma, skill, generosity, and longevity cemented the transition from\
+      republic to empire.<br>\
   	  <b>Administrative</b> He built a permanent civil-service and administrative bureaucracy consisting\
   	  of slaves and ex-slaves which provided professionalism of administration and continuity between\
   	  leadership changes. He improved the productivity of the unwieldy Senate by creating a\
@@ -645,6 +661,25 @@ var eventsInfo = {
       "start" : 306,
       "end"   : 337,
       "color" : "#7851A9",
+      "group" : "rulers",
+      "descr" : "\
+      <ul>\
+      <li>Gaul & Britain (306 - 312)</li>\
+      <li>Western Empire (312 - 324)</li>\
+      <li>Whole Empire (324 - 337)</li>\
+      </ul>\
+      Constantine was a visionary who saw a stable unified empire governed by the\
+      authority of one emperor, from one city, following one religion. He tried to unify\
+      Christianity with the council of Nicea. He built the city of Constantinople from\
+      to be fit for a Christian emperor like himself.\
+      Constantine continued many of the Diocletianic reforms to the bureaucracy, imperial\
+      image, and administration. He continued the Germanization of the army."
+    },
+    {
+      "name"  : "Constantius II",
+      "start" : 337,
+      "end"   : 361,
+      "color" : "#7851A9",
       "group" : "rulers"
     },
     {
@@ -653,11 +688,54 @@ var eventsInfo = {
       "end"   : 363,
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "Like Marcus Aurelius, Julian was inclined toward intellectual\
-      pursuits, but refused to shirk his duty as a military general. He attempted to\
-      revert the administration, religion, and imperial image to more traditional\
-      forms, but found that Christianity, bureaucracy, and the divine emperor were\
-      firmly entrenched."
+      "descr" : "Julian was born in Constantinople to Christian parents. After the death of Constantine,\
+      he retreated to intellectual study of Christian and classic Greek literature and\
+      philosophy. He was particularly drawn to the mysticism of Neoplatonism and developed\
+      beliefs in theurgy, divination, and the importance of animal sacrifice. In 351, Julian\
+      privately rejected his Christian upbringing. In 355, Julian was appointed by Constantius to be\
+      Caesar of the west. Although more naturally inclined to private study, the ambitious Julian was\
+      determined to master the military demands of his new position. He won crucial victories against\
+      invading German tribes and respect from his soldiers.<br>\
+      <br>\
+      When Constantius died in 361, Julian became sole emperor and wasted no time trying to undo all\
+      the work of Diocletian and Constantine. He abandoned the quasi-divine emperor charade,\
+      shrank the imperial court and bureaucracy, and redistributed governing power to city\
+      and province leaders. However, these reforms mostly caused confusion and didn't last\
+      beyond Julian's short reign. More famously, Julian attempted to orchestrate an empire-wide\
+      pagan revival by limiting Christians' access to imperial leadership positions. One of his\
+      most savvy political moves was his Tolerance Edict which declared all religions\
+      equal in the eyes of the state. He reasoned that without imperial sponsorship of \"mainstream\"\
+      Christianity, the incohesive religion would be torn apart by its own internal divisions.<br>\
+      <br>\
+      World history may have been radically different had Julian lived longer. However, his reforms\
+      came to a screetching halt when Julian was shot with an arrow in battle during a campaign\
+      against the Persians. No doubt, the visionary Julian aspired to be one of the Antonines with\
+      their long reigns over a stable and vibrant Roman era. But the crisis years and subsequent\
+      reforms had left the empire a vastly different place, and two years was simply not enough\
+      time."
+    },
+    {
+      "name"  : "Valentinian I",
+      "start" : 364,
+      "end"   : 375,
+      "color" : "#7851A9",
+      "group" : "rulers",
+      "descr" : "At a meeting with the Quadi tribe, Valentinian got so angry that he suffered\
+      and died from a stroke induced from his yelling."
+    },
+    {
+      "name"  : "Valens",
+      "start" : 364,
+      "end"   : 378,
+      "color" : "#7851A9",
+      "group" : "rulers"
+    },
+    {
+      "name"  : "Valentinian II",
+      "start" : 375,
+      "end"   : 392,
+      "color" : "#7851A9",
+      "group" : "rulers",
     },
     {
       "name"  : "Gothic War",

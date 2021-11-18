@@ -219,7 +219,7 @@ function addButton(x, y, width, height, eventName) {
   var descrLabel = document.getElementById('descr-label');
   b.onclick = function() {
     descrLabel.style.left = x+'px';
-    descrLabel.style.top = (y+height)+'px';
+    descrLabel.style.top = (y+height+5)+'px';
     descrLabel.style.backgroundColor = 'white';
     descrLabel.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
   };
