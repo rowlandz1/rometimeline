@@ -1,6 +1,6 @@
 var renderInfo = {
-  "widthPx"        : 7000,
-  "heightPx"       : 800,
+  "widthPx"        : 10000,
+  "heightPx"       : 900,
   "eventHeightPx"  : 30,
   "eventSpacingPx" : 5
 };
@@ -13,12 +13,12 @@ var eventsInfo = {
   "events"  : [
     {
       "name" : "Founding of Rome",
-      "when" : -753,
+      "when" : "753 BCE",
       "descr" : "Little is known of the actual origins of the city. The archaeological record indicates\
   	  that Rome developed from various Italic tribes who migrated from the Alban Hills into the\
   	  agriculturally-superior valley near the Tiber River. The discovery of some fortification walls\
   	  on the Palatine Hill that probably date to the mid-eighth century BC seem to justify the traditional\
-  	  753 B.C. date for the city's founding as reasonable.<br>\
+  	  753 BC date for the city's founding as reasonable.<br>\
       <br>\
   	  According to legend, Rome was founded by Romulus who was born with his twin brother Remus in Alba\
   	  Longa to the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
@@ -35,51 +35,51 @@ var eventsInfo = {
     },
     {
       "name" : "Founding of the Republic",
-      "when" : -509
+      "when" : "509 BCE"
     },
     {
   	  "name" : "Dictatorship of Cincinnatus",
-  	  "when" : -458
+  	  "when" : "458 BCE"
   	},
     {
       "name" : "Twelve Tables",
-      "when" : -451
+      "when" : "451 BCE"
     },
     {
   	  "name" : "The Siege of Veii",
-  	  "when" : -396
+  	  "when" : "396 BCE"
   	},
     {
       "name" : "Rome Sacked by Gauls",
-      "when" : -390
+      "when" : "390 BCE"
     },
     {
       "name" : "Battle of Cannae",
-      "when" : -216
+      "when" : "216 BCE"
     },
     {
       "name" : "Battle of Zama",
-      "when" : -202
+      "when" : "202 BCE"
     },
     {
   	  "name" : "Sulla marches on Rome",
-  	  "when" : -88
+  	  "when" : "88 BCE"
   	},
     {
       "name" : "Catiline Conspiracy",
-      "when" : -63
+      "when" : "63 BCE"
     },
     {
       "name" : "Crossing of the Rubicon",
-      "when" : -49
+      "when" : "49 BCE"
     },
     {
       "name" : "Julius Caesar Killed",
-      "when" : -44
+      "when" : "15 March 44 BCE"
     },
     {
   	  "name" : "Battle of Philippi",
-  	  "when" : -42,
+  	  "when" : "42 BCE",
   	  "descr" : "The forces of the Second Triumvirate met the armies of Cassius and Brutus at\
   	  Philippi where they had fortified a defensive position between mountains and a swamp. Mark\
   	  Antony decided to make an unexpected attack from the swamp and was able to take the base.\
@@ -89,75 +89,111 @@ var eventsInfo = {
   	},
     {
       "name" : "Battle of Actium",
-      "when" : -31
+      "when" : "31 BCE"
     },
     {
   	  "name" : "Census of Quirinius",
-  	  "when" : 6
+  	  "when" : "6"
   	},
     {
       "name" : "Battle of the Teutoburg Forest",
-      "when" : 9
+      "when" : "9"
     },
     {
       "name" : "Crucifixion of Jesus",
-      "when" : 33
+      "when" : "33"
     },
     {
       "name" : "Rome Invades Britain",
-      "when" : 43
+      "when" : "43"
     },
     {
       "name" : "Boudican Revolt",
-      "when" : 60
+      "when" : "60"
     },
     {
       "name" : "Great Fire of Rome",
-      "when" : 64
+      "when" : "64"
     },
     {
       "name" : "Year of Four Emperors",
-      "when" : 69
+      "when" : "69"
     },
     {
       "name" : "Colosseum Completed",
-      "when" : 80
+      "when" : "80"
     },
     {
       "name" : "Hadrian's Wall Completed",
-      "when" : 128
+      "when" : "128"
     },
     {
       "name" : "Year of Five Emperors",
-      "when" : 193
+      "when" : "193"
     },
     {
       "name" : "Sassanid Empire",
-      "when" : 224
+      "when" : "224"
     },
     {
       "name" : "Year of Six Emperors",
-      "when" : 238
+      "when" : "238"
     },
     {
       "name" : "Death of Mani",
-      "when" : 277
+      "when" : "277"
     },
     {
       "name" : "Battle of the Milvian Bridge",
-      "when" : 312
+      "when" : "312",
+      "descr" : "Constantine and Maxentius met in battle outside of Rome along the Tiber River.\
+      Although Constantine was outnumbered, the skill and loyalty of his veteran army far\
+      exceeded that of his opponent's. Constantine won handily and became the sole ruler of the\
+      western empire.<br>\
+      <br>\
+      The battle is most famous for the alleged divine intervention that assured Constantine's\
+      victory. As the story goes, Constantine was marching with his army when he saw a cross\
+      above the sun and the\
+      Greek words \"In this sign, conquer\" written alongside. That night, he also had\
+      a dream in which Christ told him to use the Chi-Rho symbol to defeat his enemies.\
+      The next morning, he painted the Chi-Rho on the shields of his soldiers and won the\
+      battle.<br>\
+      <br>\
+      Though the battle is often cited as the event that triggered Constantine's conversion to\
+      Christianity, it is unclear whether Constantine actually attributed his successes to the Christian\
+      God at this time. The historical details of Constantine's motivations were lost or twisted by\
+      the Christian propaganda later in his reign. His language and symbolism were\
+      general enough to be interpreted as either Christian or not. The Chi-Rho, for example, was already\
+      understood as an abbreviation of the Greek word <i>chrēston</i> (good), and was used by scholars to\
+      mark notable passages in a book. It is likely\
+      that his vague rhetoric was a conscious political choice meant to appeal to a broad audience of\
+      disgrungled monotheists and only retroactively changed to be explicitly Christian."
     },
     {
       "name" : "Edict of Milan",
-      "when" : 313
+      "when" : "313"
+    },
+    {
+      "name" : "Council of Nicea",
+      "when" : "325",
+      "descr" : "The Council of Nicea was a meeting of bishops from all over the empire, called by\
+      Constantine, to settle schisms within Christianity, particularly the dispute between the Arians\
+      and cosubstantialists. Constantine himself, overseeing the proceedings, did not advocate for any\
+      particular position, but insisted that orthodoxy be established and that unity within the\
+      empire's new religion was of utmost importance.<br>\
+      <br>\
+      The council was partially successful in achieving Constantine's dream of a unified Christianity.\
+      It did much to foster connection between Christians across the empire and establish an official\
+      doctrine. However, the newly declared heretical beliefs did not disappear overnight. The Arians,\
+      for example, would fight bitterly for another several hundred years until their extinction."
     },
     {
       "name" : "Founding of Constantinople",
-      "when" : 330
+      "when" : "330"
     },
     {
       "name" : "Great Conspiracy",
-      "when" : 368,
+      "when" : "368",
       "descr" : "The entirity of Britain was overrun by a supposedly coordinated\
       attack by the Picts, Scotti, and Saxons, who pillaged and murdered as they\
       pleased. The Roman authorities retreated to walled cities in the southeast.\
@@ -166,7 +202,7 @@ var eventsInfo = {
     },
     {
       "name" : "Alter of Victory Removed",
-      "when" : 382,
+      "when" : "382",
       "descr" : "The Alter of Victory was a symbol of Roman strength granted by the\
       favor of the Roman pantheon. In 382, it was taken down at the prodding of Bishop\
       Ambrose, and to the chagrin of the still-pagan aristocracy of the city of Rome. Many\
@@ -175,7 +211,7 @@ var eventsInfo = {
     },
     {
       "name" : "Massacre of Thessalonica",
-      "when" : 390,
+      "when" : "390",
       "descr" : "Theodosius ordered a massacre of citizens as retribution for insubordination.\
       When news reached Ambrose of Milan, he refused to offer communion to Theodosius until\
       he repented. Theodosius, remorseful and fearful for his soul, ultimately gave in to\
@@ -185,15 +221,15 @@ var eventsInfo = {
     },
     {
       "name" : "Ravenna Becomes Western Capital",
-      "when" : 402
+      "when" : "402"
     },
     {
       "name" : "Barbarian Invasion",
-      "when" : 406
+      "when" : "406"
     },
     {
       "name" : "Sack of Rome",
-      "when" : 410,
+      "when" : "410",
       "descr" : "Alaric, king of the Visigoths, was trying to extract concessions of land and\
       supplies from Emperor Honorius in Ravenna. However, after two sieges of Rome, Honorius\
       was still stubbornly resistant to negotiation. When Alaric's army was attacked by his\
@@ -210,7 +246,7 @@ var eventsInfo = {
     },
     {
       "name" : "Vandal Kingdom Established",
-      "when" : 439,
+      "when" : "439",
       "descr" : "Having been previously awarded land in Numidia in 435, the opportunistic\
       Vandals under Genseric marched into the province of Africa and captured the city of\
       Carthage. Genseric declared himself the king of a new Vandal Kingdom and embraced the\
@@ -222,177 +258,177 @@ var eventsInfo = {
     },
     {
       "name" : "Vandal Sack of Rome",
-      "when" : 455
+      "when" : "455"
     },
     {
       "name" : "Augustulus Deposed",
-      "when" : 476
+      "when" : "476"
     }
   ],
   "intervalEvents"  : [
     {
       "name"  : "Romulus",
-      "start" : -753,
-      "end"   : -715,
+      "start" : "753 BCE",
+      "end"   : "715 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Numa Pompilius",
-      "start" : -715,
-      "end"   : -673,
+      "start" : "715 BCE",
+      "end"   : "673 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Tullus Hostilius",
-      "start" : -673,
-      "end"   : -642,
+      "start" : "673 BCE",
+      "end"   : "642 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Ancus Martius",
-      "start" : -642,
-      "end"   : -616,
+      "start" : "642 BCE",
+      "end"   : "616 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Tarquinius Priscus",
-      "start" : -616,
-      "end"   : -579,
+      "start" : "616 BCE",
+      "end"   : "579 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Servius Tullius",
-      "start" : -579,
-      "end"   : -534,
+      "start" : "579 BCE",
+      "end"   : "534 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "Tarquinius Superbus",
-      "start" : -534,
-      "end"   : -509,
+      "start" : "534 BCE",
+      "end"   : "509 BCE",
       "color" : "gold",
       "group" : "rulers"
     },
     {
       "name"  : "First Samnite War",
-      "start" : -343,
-      "end"   : -341,
+      "start" : "343 BCE",
+      "end"   : "341 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Latin War",
-      "start" : -340,
-      "end"   : -338,
+      "start" : "340 BCE",
+      "end"   : "338 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Alexander the Great",
-      "start" : -336,
-      "end"   : -323,
+      "start" : "336 BCE",
+      "end"   : "323 BCE",
       "color" : "blue"
     },
     {
       "name"  : "Second Samnite War",
-      "start" : -326,
-      "end"   : -304,
+      "start" : "326 BCE",
+      "end"   : "304 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Third Samnite War",
-      "start" : -298,
-      "end"   : -290,
+      "start" : "298 BCE",
+      "end"   : "290 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Pyrrhic War",
-      "start" : -280,
-      "end"   : -275,
+      "start" : "280 BCE",
+      "end"   : "275 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "First Punic War",
-      "start" : -264,
-      "end"   : -241,
+      "start" : "264 BCE",
+      "end"   : "241 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Second Punic War",
-      "start" : -218,
-      "end"   : -201,
+      "start" : "218 BCE",
+      "end"   : "201 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Second Macedonian War",
-      "start" : -200,
-      "end"   : -197,
+      "start" : "200 BCE",
+      "end"   : "197 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Third Macedonian War",
-      "start" : -171,
-      "end"   : -168,
+      "start" : "171 BCE",
+      "end"   : "168 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Third Punic War",
-      "start" : -149,
-      "end"   : -146,
+      "start" : "149 BCE",
+      "end"   : "146 BCE",
       "color" : "#EE1111"
     },
     {
   	  "name"  : "First Servile War",
-  	  "start" : -135,
-  	  "end"   : -132,
+  	  "start" : "135 BCE",
+  	  "end"   : "132 BCE",
   	  "color" : "#EE1111"
   	},
   	{
   	  "name"  : "Marius",
-  	  "start" : -107,
-  	  "end"   : -100,
+  	  "start" : "107 BCE",
+  	  "end"   : "100 BCE",
   	  "color" : "blue",
   	  "descr" : "Marius was consul an unprecedented seven times during 107, 104-100, and 86 BC."
   	},
     {
       "name"  : "Social War",
-      "start" : -91,
-      "end"   : -87,
+      "start" : "91 BCE",
+      "end"   : "87 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "First Mithridatic War",
-      "start" : -89,
-      "end"   : -85,
+      "start" : "89 BCE",
+      "end"   : "85 BCE",
       "color" : "#EE1111"
     },
     {
       "name"  : "Third Servile War",
-      "start" : -73,
-      "end"   : -71,
+      "start" : "73 BCE",
+      "end"   : "71 BCE",
       "color" : "#EE1111"
     },
     {
   	  "name"  : "First Triumvirate",
-  	  "start" : -60,
-  	  "end"   : -53,
+  	  "start" : "60 BCE",
+  	  "end"   : "53 BCE",
   	  "color" : "blue",
   	  "descr" : "Informal political alliance among Julius Caesar, Crassus, and Pompey"
   	},
     {
       "name"  : "Gallic Wars",
-      "start" : -58,
-      "end"   : -50,
+      "start" : "58 BCE",
+      "end"   : "50 BCE",
       "color" : "#EE1111"
     },
     {
   	  "name"  : "Second Triumvirate",
-  	  "start" : -43,
-  	  "end"   : -32,
+  	  "start" : "43 BCE",
+  	  "end"   : "32 BCE",
   	  "color" : "blue",
   	  "descr" : "Officially the \"triumvirate for organizing the republic\", the Second Triumvirate was\
   	  a political alliance among Octavian, Antony, and Lepidus. Though relations between Octavian and\
@@ -402,8 +438,8 @@ var eventsInfo = {
   	},
     {
       "name"  : "Augustus",
-      "start" : -27,
-      "end"   : 14,
+      "start" : "27 BCE",
+      "end"   : "14",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "Born Gaius Octavius, Augustus demonstrated remarkable ability in oratory, politics, and\
@@ -437,110 +473,110 @@ var eventsInfo = {
     },
     {
       "name"  : "Tiberius",
-      "start" : 14,
-      "end"   : 37,
+      "start" : "14",
+      "end"   : "37",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Caligula",
-      "start" : 37,
-      "end"   : 41,
+      "start" : "37",
+      "end"   : "41",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Claudius",
-      "start" : 41,
-      "end"   : 54,
+      "start" : "41",
+      "end"   : "54",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Nero",
-      "start" : 54,
-      "end"   : 68,
+      "start" : "54",
+      "end"   : "68",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Great Jewish Revolt",
-      "start" : 66,
-      "end"   : 73,
+      "start" : "66",
+      "end"   : "73",
       "color" : "#EE1111"
     },
     {
       "name"  : "Vespasian",
-      "start" : 69,
-      "end"   : 79,
+      "start" : "69",
+      "end"   : "79",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Domitian",
-      "start" : 81,
-      "end"   : 96,
+      "start" : "81",
+      "end"   : "96",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Nerva",
-      "start" : 96,
-      "end"   : 98,
+      "start" : "96",
+      "end"   : "98",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Trajan",
-      "start" : 98,
-      "end"   : 117,
+      "start" : "98",
+      "end"   : "117",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Hadrian",
-      "start" : 117,
-      "end"   : 138,
+      "start" : "117",
+      "end"   : "138",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Antoninus Pius",
-      "start" : 138,
-      "end"   : 161,
+      "start" : "138",
+      "end"   : "161",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Marcus Aurelius",
-      "start" : 161,
-      "end"   : 180,
+      "start" : "161",
+      "end"   : "180",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Marcomannic Wars",
-      "start" : 166,
-      "end"   : 180,
+      "start" : "166",
+      "end"   : "180",
       "color" : "#EE1111"
     },
     {
       "name"  : "Commodus",
-      "start" : 176,
-      "end"   : 192,
+      "start" : "176",
+      "end"   : "192",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Antonine Plague",
-      "start" : 165,
-      "end"   : 180,
+      "start" : "165",
+      "end"   : "180",
       "color" : "green"
     },
     {
       "name"  : "Severus",
-      "start" : 193,
-      "end"   : 211,
+      "start" : "193",
+      "end"   : "211",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "Being the first major emperor after the Antonine dynasty, his legitimacy was critically\
@@ -558,59 +594,73 @@ var eventsInfo = {
     },
     {
       "name"  : "Caracalla",
-      "start" : 198,
-      "end"   : 217,
+      "start" : "198",
+      "end"   : "217",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Elagabalus",
-      "start" : 218,
-      "end"   : 222,
+      "start" : "218",
+      "end"   : "222",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Severus Alexander",
-      "start" : 222,
-      "end"   : 235,
+      "start" : "222",
+      "end"   : "235",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Crisis of the Third Century",
-      "start" : 235,
-      "end"   : 284,
+      "start" : "235",
+      "end"   : "284",
       "color" : "#EE1111",
-      "descr" : "During the mid-third century, the empire nearly fell apart due to a combination of\
-  	  political instability, external invasion, plague, and economic depression.\
-  	  By this time, the legions had come to expect frequent wage increases and bonuses which was taking\
-  	  a toll on the empire's economy. Emperors who refused to comply with the army's demands were overthrown.\
-  	  This devastated the sitting emperor's ability to hold power. The emperor faced too many challenges to\
-  	  deal with on his own, but delegating tasks to a general ran the risk of creating a usurper.\
-  	  Internal trade networks broke down. Beginning with Aurelian, the defensive strategy shifted to\
-  	  one of waiting for the imperial army behind city walls instead of patrolling the extensive Rhine\
-  	  and Danube frontiers. The Cyprian Plague reduced the number of soldiers and farmers prompting\
-  	  invasion and famine. Due to debasement and constant minting of new coins, Roman currency became almost\
-  	  worthless."
+      "descr" : "During the mid-third century, the empire nearly fell apart due to a\
+      combination of political instability, external invasion, plague, and economic depression.\
+      The seeds of the late Roman Empire and the Middle Ages were sown during the crisis\
+      years: decreased defense along the northern frontiers, increased city defenses, the\
+      decline of the legions, the breakdown of internal trade networks, growing inequality,\
+      and the breakdown of the middle class.<br>\
+      <br>\
+      The Severans had set a precedent for emperors to give large donatives and\
+      frequent wage increases to the soldiers to prevent rebellion. The army came to\
+      feel so entitled to these benefits that pandering to the army became the only\
+      source of imperial legitimacy. Troops elevated their generals to emperor upon\
+      glorious victory fueling perpetual civil war. Emperors were deposed by rival\
+      generals or when they simply fell out of favor with the army.\
+      This breakdown of imperial legitimacy exacerbated external threats and crippled\
+      the Roman response. Germanic tribes took notice of the political mess and\
+      and conducted raids across the extensive Rhine and Danube frontiers. Meanwhile,\
+      the sitting emperor was forced to deal with these threats himself instead of\
+      creating potential usurpers by delegating military responsibility to competent\
+      generals. Additionally, the Cyprian plague caused widespread manpower shortages\
+      that affected army recruitment and economic productivity.<br>\
+      <br>\
+      The unreasonable monetary demands of the army were also straining the imperial\
+      tax system leading emperors to resort to tampering with the Roman currency.\
+      Frequent debasement and minting lead to massive inflation such that the western\
+      empire nearly reverted to a barter system."
     },
     {
       "name"  : "Cyprian Plague",
-      "start" : 249,
-      "end"   : 262,
+      "start" : "249",
+      "end"   : "262",
       "color" : "green"
     },
     {
       "name"  : "Valerian",
-      "start" : 253,
-      "end"   : 260,
+      "start" : "253",
+      "end"   : "260",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Aurelian",
-      "start" : 270,
-      "end"   : 275,
+      "start" : "270",
+      "end"   : "275",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "<ul>\
@@ -622,8 +672,8 @@ var eventsInfo = {
     },
     {
       "name"  : "Diocletian",
-      "start" : 284,
-      "end"   : 305,
+      "start" : "284",
+      "end"   : "305",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "The reforms of the charismatic Diocletian lifted the empire out of the crisis era.\
@@ -658,8 +708,8 @@ var eventsInfo = {
     },
     {
       "name"  : "Constantine",
-      "start" : 306,
-      "end"   : 337,
+      "start" : "306",
+      "end"   : "337",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "\
@@ -668,24 +718,43 @@ var eventsInfo = {
       <li>Western Empire (312 - 324)</li>\
       <li>Whole Empire (324 - 337)</li>\
       </ul>\
-      Constantine was a visionary who saw a stable unified empire governed by the\
-      authority of one emperor, from one city, following one religion. He tried to unify\
-      Christianity with the council of Nicea. He built the city of Constantinople from\
-      to be fit for a Christian emperor like himself.\
-      Constantine continued many of the Diocletianic reforms to the bureaucracy, imperial\
-      image, and administration. He continued the Germanization of the army."
+      Constantine is famous for being the emperor who converted Rome to Christianity; and that\
+      legacy is certainly well-deserved. His religious convictions influenced nearly every action\
+      he took before and after his rise to power, and his unyielding insistance on a single\
+      national religion profoundly changed world history. As sole emperor, he built churches,\
+      issued morality laws, gave preference to Christians for public positions, and even outlawed\
+      the millenium-old pagan practices of divination and sacrifice.<br>\
+      <br>\
+      Though eventually a fervant Christian, it is difficult to trace\
+      his precise religious opinions up to the time he became sole emperor.\
+      The rhetoric during his early reign was vaguely monotheistic, but didn't commit to any single\
+      belief system. It appears that Constantine was searching for the \"correct\" faith during his\
+      rise to power, and later retroactively attributed his successes to the Christian God.\
+      His vague religious posture may have been a conscious choice to appeal to a wide range of\
+      potential supporters. An idealist,\
+      Constantine may have sought to leverage the organization of the early Church heirarchy, contrasted\
+      with independent local pagan practice, as a tool of unification.<br>\
+      <br>\
+      Constantine's monetary policy ultimately separated Romans economically rather than unifying them.\
+      While Diocletian had basically abandoned currency, Constantine introduced the gold solidus which\
+      would form the backbone of the eastern and western economies for hundreds of years. However, he\
+      neglected to stabilize silver and bronze currency which worsened inequality between rich and poor.\
+      He also introduced a commercial tax which forced many members of the lower classes to become\
+      indentured servants to wealthy landowners. Meanwhile, wealthy landowners, with their new workers,\
+      made their estates more self-sufficient to reduce the amount they owed, becoming the\
+      precursors of Medieval fiefdoms."
     },
     {
       "name"  : "Constantius II",
-      "start" : 337,
-      "end"   : 361,
+      "start" : "337",
+      "end"   : "361",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Julian the Apostate",
-      "start" : 355,
-      "end"   : 363,
+      "start" : "355",
+      "end"   : "363",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "Julian was born in Constantinople to Christian parents. After the death of Constantine,\
@@ -716,8 +785,8 @@ var eventsInfo = {
     },
     {
       "name"  : "Valentinian I",
-      "start" : 364,
-      "end"   : 375,
+      "start" : "364",
+      "end"   : "375",
       "color" : "#7851A9",
       "group" : "rulers",
       "descr" : "At a meeting with the Quadi tribe, Valentinian got so angry that he suffered\
@@ -725,22 +794,22 @@ var eventsInfo = {
     },
     {
       "name"  : "Valens",
-      "start" : 364,
-      "end"   : 378,
+      "start" : "364",
+      "end"   : "378",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Valentinian II",
-      "start" : 375,
-      "end"   : 392,
+      "start" : "375",
+      "end"   : "392",
       "color" : "#7851A9",
       "group" : "rulers",
     },
     {
       "name"  : "Gothic War",
-      "start" : 376,
-      "end"   : 382,
+      "start" : "376",
+      "end"   : "382",
       "color" : "#EE1111",
       "descr" : "In 376, a hoard of Goths crossed the Danube seeking refuge from the Huns.\
       After enduring harassment from local Roman leaders, they revolted and began rampaging\
@@ -758,41 +827,41 @@ var eventsInfo = {
     },
     {
       "name"  : "Theodosius",
-      "start" : 379,
-      "end"   : 395,
+      "start" : "379",
+      "end"   : "395",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Stilicho",
-      "start" : 382,
-      "end"   : 408,
+      "start" : "382",
+      "end"   : "408",
       "color" : "orange"
     },
     {
       "name"  : "Honorius",
-      "start" : 393,
-      "end"   : 423,
+      "start" : "393",
+      "end"   : "423",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Valentinian III",
-      "start" : 425,
-      "end"   : 455,
+      "start" : "425",
+      "end"   : "455",
       "color" : "#7851A9",
       "group" : "rulers"
     },
     {
       "name"  : "Aëtius",
-      "start" : 433,
-      "end"   : 454,
+      "start" : "433",
+      "end"   : "454",
       "color" : "orange"
     },
     {
       "name"  : "Ricimer",
-      "start" : 461,
-      "end"   : 472,
+      "start" : "461",
+      "end"   : "472",
       "color" : "orange"
     }
   ]
