@@ -23,12 +23,16 @@ function draw() {
   ctx = canvas.getContext('2d');
   ctx.lineWidth = 2;
 
+  // Parse dates (this really shouldn't happen here)
   for (var evnt of eventsInfo.events) {
     evnt.when = parseDate(evnt.when).year;
   }
   for (var evnt of eventsInfo.intervalEvents) {
     evnt.start = parseDate(evnt.start).year;
     evnt.end = parseDate(evnt.end).year;
+  }
+  for (var map of eventsInfo.maps) {
+    map.when = parseDate(map.when).year;
   }
 
   // background tiling image
@@ -47,7 +51,8 @@ function draw() {
       var h = drawIntervalEvents(partitionedEvents[group], yPx, "align-left");
       yPx += h;
     }
-    drawEvents(eventsInfo.events, canvas.height / 3 - 8, 50);
+    drawEvents(eventsInfo.events, canvas.height / 3 - 8, 70);
+    drawMaps(eventsInfo.maps, canvas.height / 3 - 15);
     drawTimeMarkers(eventsInfo, canvas.height / 3);
   };
 
@@ -209,6 +214,27 @@ function drawEventText(text, textXPx, textYPx, textWidth) {
   addButton(textXPx, textYPx - 16, textWidth, 18, text);
 }
 
+function drawMaps(maps, yPx) {
+  var descrLabel = document.getElementById('descr-label');
+  for (let map of maps) {
+    let xPx = (map.when - eventsInfo.start) / timespan * canvas.width;
+    let icon = document.createElement('img');
+    icon.onclick = function() {
+      descrLabel.style.left = xPx+'px';
+      descrLabel.style.top = '0px';
+      descrLabel.style.width = 'inherit';
+      descrLabel.style.backgroundColor = 'white';
+      descrLabel.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
+      descrLabel.hidden = false;
+    };
+    icon.src = 'mapicon3.png';
+    icon.style.position = 'absolute';
+    icon.style.left = (xPx-15)+'px';
+    icon.style.top = (yPx-30)+'px';
+    document.body.appendChild(icon);
+  }
+}
+
 // Draws a label with black text and a semi-transparent white background.
 // Providing a textWidth can prevent recalculating it.
 function drawLabel(text, x, y, textWidth=0) {
@@ -221,6 +247,7 @@ function drawLabel(text, x, y, textWidth=0) {
 
 function handleMouseClick(e) {
   //console.log(e.offsetX + " " + e.offsetY);
+  document.getElementById('descr-label').hidden = true;
 }
 
 function handleMouseMove(e) {
@@ -246,6 +273,7 @@ function addButton(x, y, width, height, eventName) {
     descrLabel.style.width = boxPxWidth + "px";
     descrLabel.style.backgroundColor = 'white';
     descrLabel.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
+    descrLabel.hidden = false;
   };
   b.style.backgroundColor = 'transparent';
   b.style.border = 'transparent';

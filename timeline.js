@@ -1,6 +1,6 @@
 var renderInfo = {
   "widthPx"        : 10000,
-  "heightPx"       : 900,
+  "heightPx"       : 1080,
   "eventHeightPx"  : 30,
   "eventSpacingPx" : 5
 };
@@ -863,6 +863,28 @@ var eventsInfo = {
       "start" : "461",
       "end"   : "472",
       "color" : "orange"
+    }
+  ],
+  "maps" : [
+    {
+      "title" : "The Mediterranian world before the Second Punic War",
+      "when"  : "218 BCE",
+      "image" : "maps/RE218BC.png"
+    },
+    {
+      "title" : "Roman Empire at its greatest extent",
+      "when"  : "117 CE",
+      "image" : "maps/RE117.png"
+    },
+    {
+      "title" : "Division of the empire under the Tetrarchy",
+      "when"  : "293 CE",
+      "image" : "maps/RE293.jpg"
+    },
+    {
+      "title" : "Rome at the fall of the western empire",
+      "when"  : "476 CE",
+      "image" : "maps/RE476.png"
     }
   ]
 };
