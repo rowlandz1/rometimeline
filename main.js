@@ -1,27 +1,20 @@
-// Canvas API documentation
-// https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
-// Initialized by draw(), never altered.
-var ctx;
-var canvas;
+// SVG namespace
+const svgns = "http://www.w3.org/2000/svg";
+
+var svg;
+var descrBox;
 var intervals2pixels;
 
 var timespan = eventsInfo.end - eventsInfo.start;
 
 function draw() {
-  canvas = document.getElementById('canvas');
-  canvas.width = renderInfo.widthPx;
-  canvas.height = renderInfo.heightPx;
-  canvas.onclick = handleMouseClick;
-  canvas.onmousemove = handleMouseMove;
-  canvas.style.position = "absolute";
-  canvas.style.left = "0px";
-  canvas.style.top = "0px";
-  intervals2pixels = canvas.width / (eventsInfo.end - eventsInfo.start);
-
-  if (canvas.getContext == undefined) return;
-  ctx = canvas.getContext('2d');
-  ctx.lineWidth = 2;
+  svg = document.getElementById('svg');
+  svg.style.width = renderInfo.widthPx + "px";
+  //svg.style.height = renderInfo.heightPx + "px";
+  svg.style.height = "100%";
+  descrBox = document.getElementById('descr-box');
+  intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
   // Parse dates (this really shouldn't happen here)
   for (var evnt of eventsInfo.events) {
@@ -35,32 +28,16 @@ function draw() {
     map.when = parseDate(map.when).year;
   }
 
-  // background tiling image
-  var bgimg = new Image();
-  bgimg.src = "scroll.jpg";
-  bgimg.onload = function() {
-    ctx.fillStyle = ctx.createPattern(bgimg, 'repeat');
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    //ctx.drawImage(bgimg, 0, 0, canvas.width, canvas.height);
-    //ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-    //ctx.fillRect(0, 0, canvas.width, canvas.height);
-    drawMainLine(eventsInfo, canvas.height / 3);
-    var partitionedEvents = partition(eventsInfo.intervalEvents, (e) => {return e.group;});
-    var yPx = canvas.height/3 + renderInfo.eventHeightPx/2 + 5;
-    for (var group of eventsInfo.groupOrder) {
-      var h = drawIntervalEvents(partitionedEvents[group], yPx, "align-left");
-      yPx += h;
-    }
-    drawEvents(eventsInfo.events, canvas.height / 3 - 8, 70);
-    drawMaps(eventsInfo.maps, canvas.height / 3 - 15);
-    drawTimeMarkers(eventsInfo, canvas.height / 3);
-  };
-
-  //var re117 = new Image();
-  // re117.src = 'RE117.png';
-  // re117.onload = function() {
-  //   ctx.drawImage(re117, 0, 150, 2534/2, 1614/2);
-  // };
+  drawMainLine(eventsInfo, renderInfo.heightPx / 3);
+  var partitionedEvents = partition(eventsInfo.intervalEvents, (e) => {return e.group;});
+  var yPx = renderInfo.heightPx/3 + renderInfo.eventHeightPx/2 + 5;
+  for (var group of eventsInfo.groupOrder) {
+    var h = drawIntervalEvents(partitionedEvents[group], yPx, "align-left");
+    yPx += h;
+  }
+  drawEvents(eventsInfo.events, renderInfo.heightPx / 3 - 8, 70);
+  drawMaps(eventsInfo.maps, renderInfo.heightPx / 3 - 15);
+  drawTimeMarkers(eventsInfo, renderInfo.heightPx / 3);
 }
 
 function drawMainLine(line, yPx) {
@@ -69,21 +46,26 @@ function drawMainLine(line, yPx) {
   var textYPx = topPx - 3;
 
   var x = 0;
-  ctx.font = '12px Sans';
+  var odd = false;
 
-  while (true) {
-    ctx.fillStyle = 'rgb(252, 224, 179)';
-    if(x + eraPxSize < canvas.width) {
-      ctx.fillRect(x, topPx, eraPxSize, renderInfo.eventHeightPx);
-      x += eraPxSize;
-    } else { break; }
-    ctx.fillStyle = 'rgb(209, 173, 116)';
-    if(x + eraPxSize < canvas.width) {
-      ctx.fillRect(x, topPx, eraPxSize, renderInfo.eventHeightPx);
-      x += eraPxSize;
-    } else { break; }
+  while (x + eraPxSize < renderInfo.widthPx) {
+    var rect = document.createElementNS(svgns, "rect");
+    rect.setAttribute("fill", odd ? "rgb(209, 173, 116)" : "rgb(252, 224, 179)");
+    rect.setAttribute("x", x);
+    rect.setAttribute("y", topPx);
+    rect.setAttribute("width", eraPxSize);
+    rect.setAttribute("height", renderInfo.eventHeightPx);
+    svg.appendChild(rect);
+    x += eraPxSize;
+    odd = !odd;
   }
-  ctx.fillRect(x, topPx, canvas.width - x, renderInfo.eventHeightPx);
+  var rect = document.createElementNS(svgns, "rect");
+  rect.setAttribute("fill", odd ? "rgb(209, 173, 116)" : "rgb(252, 224, 179)");
+  rect.setAttribute("x", x);
+  rect.setAttribute("y", topPx);
+  rect.setAttribute("width", renderInfo.widthPx - x);
+  rect.setAttribute("height", renderInfo.eventHeightPx);
+  svg.appendChild(rect);
 }
 
 function drawTimeMarkers(line, yPx) {
@@ -91,13 +73,13 @@ function drawTimeMarkers(line, yPx) {
   var textYPx = yPx - renderInfo.eventHeightPx/2 - 6;
   var x = 0;
   var timeLabel = line.start;
-  ctx.font = '12px Sans';
-  while (x + eraPxSize < canvas.width) {
-    drawLabel(year2string(timeLabel), x+4, textYPx);
+  while (x + eraPxSize < renderInfo.widthPx) {
+    var label = mkLabel(year2string(timeLabel), x+4, textYPx);
+    svg.appendChild(label);
     x += eraPxSize;
     timeLabel += line.eraSize;
   }
-  drawLabel(year2string(timeLabel), x+4, textYPx);
+  svg.appendChild(mkLabel(year2string(timeLabel), x+4, textYPx));
 }
 
 // Draw the interval events below the main line. The labelstyle determines how
@@ -115,7 +97,7 @@ function drawIntervalEvents(evnts, yPx, labelstyle) {
     var t = 0;
     var evntStartPx = evnts[i].start * intervals2pixels;
     var evntEndPx = evnts[i].end * intervals2pixels;
-    var evntTextWidth = ctx.measureText(evnts[i].name).width;
+    var evntTextWidth = getTextWidth(evnts[i].name, "14px Laila");
 
     var rightBoundary;
     if (labelstyle == "adj-right") {
@@ -137,29 +119,34 @@ function drawIntervalEvents(evnts, yPx, labelstyle) {
 }
 
 function drawIntervalEvent(evnt, yPx, labelstyle) {
-  var evntPxStart = (evnt.start - eventsInfo.start) / timespan * canvas.width;
-  var evntPxLength = (evnt.end - evnt.start) / timespan * canvas.width;
+  var evntPxStart = (evnt.start - eventsInfo.start) / timespan * renderInfo.widthPx;
+  var evntPxLength = (evnt.end - evnt.start) / timespan * renderInfo.widthPx;
+  var g = document.createElementNS(svgns, "g");
 
   // draw rounded rect
-  ctx.fillStyle = evnt.color;
-  fillRoundedRect(ctx, evntPxStart, yPx, evntPxLength, renderInfo.eventHeightPx, 5);
-  var oldstrokestyle = ctx.strokeStyle;
-  ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
-  drawRoundedRect(ctx, evntPxStart, yPx, evntPxLength, renderInfo.eventHeightPx, 5);
-  ctx.strokeStyle = oldstrokestyle;
+  var rect = document.createElementNS(svgns, "rect");
+  rect.setAttribute("x", evntPxStart);
+  rect.setAttribute("y", yPx);
+  rect.setAttribute("width", evntPxLength);
+  rect.setAttribute("height", renderInfo.eventHeightPx);
+  rect.setAttribute("rx", 5);
+  rect.setAttribute("ry", 5);
+  rect.setAttribute("style", `fill: ${evnt.color}; stroke: rgba(0,0,0,0.1); stroke-width: 1px`);
+  g.appendChild(rect);
 
   // draw text
   if (labelstyle == "adj-right") {
-    drawLabel(evnt.name, evntPxStart + evntPxLength + 4, yPx + 16);
+    g.appendChild(mkLabel(evnt.name, evntPxStart + evntPxLength + 4, yPx + 16));
   } else if (labelstyle == "align-left") {
-    drawLabel(evnt.name, evntPxStart + 4, yPx + 16);
+    g.appendChild(mkLabel(evnt.name, evntPxStart + 4, yPx + 16));
   } else {
-    ctx.fillStyle = 'white';
-    ctx.fillText(evnt.name, evntPxStart + 4, yPx + 16, evntPxLength - 8);
+    console.log("interval event must be adj-right or align-left");
   }
 
-  // make invisible button
-  addButton(evntPxStart, yPx, evntPxLength, renderInfo.eventHeightPx, evnt.name);
+  // click action
+  g.onclick = getDisplayEventInfoFunction(evnt.name);
+
+  svg.appendChild(g);
 }
 
 function drawEvents(evnts, pointYPx, stalkPx) {
@@ -169,9 +156,9 @@ function drawEvents(evnts, pointYPx, stalkPx) {
   var sepPx = 25;
 
   for (var i = 0; i < evnts.length; i++) {
-    textWidth = ctx.measureText(evnts[i].name).width;
-    pointXPx = (evnts[i].when - eventsInfo.start) / timespan * canvas.width;
-    textXPx = Math.min(pointXPx - 10, canvas.width - textWidth - 8);
+    textWidth = getTextWidth(evnts[i].name, "14px Laila");
+    pointXPx = (evnts[i].when - eventsInfo.start) / timespan * renderInfo.widthPx;
+    textXPx = Math.min(pointXPx - 10, renderInfo.widthPx - textWidth - 8);
 
     var t = 0;
     while (t < lanes.length && lanes[t] < textXPx + textWidth + 8) t++;
@@ -192,95 +179,110 @@ function drawEvents(evnts, pointYPx, stalkPx) {
 }
 
 function drawEventStalk(pointXPx, pointYPx, textYPx) {
-  ctx.strokeStyle = '#444444';
-  ctx.beginPath();
-  ctx.moveTo(pointXPx, pointYPx - 5);
-  ctx.lineTo(pointXPx, textYPx + 3);            // vertical line
-  ctx.stroke();
+  var stalk = document.createElementNS(svgns, "line");
+  stalk.setAttribute("x1", pointXPx);
+  stalk.setAttribute("y1", pointYPx - 5);
+  stalk.setAttribute("x2", pointXPx);
+  stalk.setAttribute("y2", textYPx + 3);
+  stalk.setAttribute("style", "stroke: #444444; stroke-width: 2px");
+  svg.appendChild(stalk);
 
-  ctx.beginPath();
-  ctx.arc(pointXPx, pointYPx, 4, 0, Math.PI * 2, true);
-  ctx.stroke();
+  var circle = document.createElementNS(svgns, "circle");
+  circle.setAttribute("cx", pointXPx);
+  circle.setAttribute("cy", pointYPx);
+  circle.setAttribute("r", 4);
+  circle.setAttribute("style", "fill: transparent; stroke: #444444; stroke-width: 2px");
+  svg.appendChild(circle);
 }
 
 function drawEventText(text, textXPx, textYPx, textWidth) {
-  drawLabel(text, textXPx, textYPx, textWidth);
-  ctx.beginPath();
-  ctx.moveTo(textXPx, textYPx + 3);
-  ctx.lineTo(textXPx + textWidth, textYPx + 3); // horizontal line
-  ctx.stroke();
+  svg.appendChild(mkButtonLabel(text, textXPx, textYPx, textWidth));
 
-  // invisible button
-  addButton(textXPx, textYPx - 16, textWidth, 18, text);
+  var line = document.createElementNS(svgns, "line");
+  line.setAttribute("x1", textXPx);
+  line.setAttribute("y1", textYPx + 3);
+  line.setAttribute("x2", textXPx + textWidth);
+  line.setAttribute("y2", textYPx + 3);
+  line.setAttribute("style", "stroke: #444444; stroke-width: 2px");
+  svg.appendChild(line);
 }
 
+// TODO: fix
 function drawMaps(maps, yPx) {
-  var descrLabel = document.getElementById('descr-label');
   for (let map of maps) {
-    let xPx = (map.when - eventsInfo.start) / timespan * canvas.width;
-    let icon = document.createElement('img');
+    let xPx = (map.when - eventsInfo.start) / timespan * renderInfo.widthPx;
+    let icon = document.createElementNS(svgns, 'img');
     icon.onclick = function() {
-      descrLabel.style.left = xPx+'px';
-      descrLabel.style.top = '0px';
-      descrLabel.style.width = 'inherit';
-      descrLabel.style.backgroundColor = 'white';
-      descrLabel.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
-      descrLabel.hidden = false;
+      descrBox.style.width = 'inherit';
+      descrBox.style.backgroundColor = 'white';
+      descrBox.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
+      descrBox.hidden = false;
     };
-    icon.src = 'mapicon3.png';
-    icon.style.position = 'absolute';
-    icon.style.left = (xPx-15)+'px';
-    icon.style.top = (yPx-30)+'px';
-    document.body.appendChild(icon);
+    icon.setAttribute("xlink:href", "mapicon3.png");
+    icon.setAttribute("x", (xPx-15));
+    icon.setAttribute("y", (yPx-30));
+    icon.setAttribute("width", 30);
+    icon.setAttribute("height", 30);
+    svg.appendChild(icon);
   }
 }
 
-// Draws a label with black text and a semi-transparent white background.
+
+// Makes a label with black text and a semi-transparent white background.
 // Providing a textWidth can prevent recalculating it.
-function drawLabel(text, x, y, textWidth=0) {
-  if (textWidth == 0) textWidth = ctx.measureText(text).width;
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
-  fillRoundedRect(ctx, x - 4, y - 14, textWidth + 8, 18, 9);
-  ctx.fillStyle = 'black';
-  ctx.fillText(text, x, y);
+function mkLabel(text, x, y, textWidth=0) {
+  if (textWidth == 0) textWidth = getTextWidth(text, "14px Laila");
+
+  var txt = document.createElementNS(svgns, "text");
+  txt.innerHTML = text;
+  txt.setAttribute("x", x);
+  txt.setAttribute("y", y);
+  txt.setAttribute("fill", "black");
+  txt.setAttribute("style", "font: 14px Laila; cursor: default;");
+
+  var rect = document.createElementNS(svgns, "rect");
+  rect.setAttribute("x", x - 4);
+  rect.setAttribute("y", y - 14);
+  rect.setAttribute("rx", 9);
+  rect.setAttribute("ry", 9);
+  rect.setAttribute("height", 18);
+  rect.setAttribute("width", textWidth + 8);
+  rect.setAttribute("style", "fill: white; opacity: 0.7;");
+
+  var g = document.createElementNS(svgns, "g");
+  g.appendChild(rect);
+  g.appendChild(txt);
+  return g;
 }
 
-function handleMouseClick(e) {
-  //console.log(e.offsetX + " " + e.offsetY);
-  document.getElementById('descr-label').hidden = true;
+// same as mkLabel with an onclick set by getDisplayEventInfoFunction(text)
+function mkButtonLabel(text, x, y, textWidth=0) {
+  var g = mkLabel(text, x, y, textWidth);
+  g.onclick = getDisplayEventInfoFunction(text);
+  return g;
+
 }
 
-function handleMouseMove(e) {
-
-}
-
-function addButton(x, y, width, height, eventName) {
-
-  // find the event specified by eventName
-  var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; });
-  if (!evnt) {
-    evnt = eventsInfo.events.find((e) => { return e.name == eventName; });
-  }
+function getDisplayEventInfoFunction(eventName) {
+  // find the event specified by text
+  var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; })
+          || eventsInfo.events.find((e) => { return e.name == eventName; });
   var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
+  var boxPxWidth = evnt.descr ? Math.max(Math.round(Math.sqrt(evnt.descr.length))*15, 300) : 300;
 
-  // set up the button
-  var b = document.createElement('button');
-  var descrLabel = document.getElementById('descr-label');
-  var boxPxWidth = evnt.descr ? Math.max(Math.round(Math.sqrt(evnt.descr.length))*20, 300) : 300;
-  b.onclick = function() {
-    descrLabel.style.left = x+'px';
-    descrLabel.style.top = (y+height+5)+'px';
-    descrLabel.style.width = boxPxWidth + "px";
-    descrLabel.style.backgroundColor = 'white';
-    descrLabel.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
-    descrLabel.hidden = false;
+  return function(){
+    descrBox.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
+    descrBox.style.width = boxPxWidth + "px";
   };
-  b.style.backgroundColor = 'transparent';
-  b.style.border = 'transparent';
-  b.style.position = 'absolute';
-  b.style.left = x+'px';
-  b.style.top = y+'px';
-  b.style.width = width+'px';
-  b.style.height = height+'px';
-  document.body.appendChild(b);
+}
+
+// This method should not have to exist, but it does because web
+// programming is stupid.
+function getTextWidth(text, font) {
+  // re-use canvas object for better performance
+  const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+  const context = canvas.getContext("2d");
+  context.font = font;
+  const metrics = context.measureText(text);
+  return metrics.width;
 }

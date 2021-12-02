@@ -15,18 +15,18 @@ var eventsInfo = {
       "name" : "Founding of Rome",
       "when" : "753 BCE",
       "descr" : "Little is known of the actual origins of the city. The archaeological record indicates\
-  	  that Rome developed from various Italic tribes who migrated from the Alban Hills into the\
-  	  agriculturally-superior valley near the Tiber River. The discovery of some fortification walls\
-  	  on the Palatine Hill that probably date to the mid-eighth century BC seem to justify the traditional\
-  	  753 BC date for the city's founding as reasonable.<br>\
+      that Rome developed from various Italic tribes who migrated from the Alban Hills into the\
+      agriculturally-superior valley near the Tiber River. The discovery of some fortification walls\
+      on the Palatine Hill that probably date to the mid-eighth century BC seem to justify the traditional\
+      753 BC date for the city's founding as reasonable.<br>\
       <br>\
-  	  According to legend, Rome was founded by Romulus who was born with his twin brother Remus in Alba\
-  	  Longa to the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
-  	  were abandoned at birth and raised by a she-wolf. As young adults, the twins decided to build a city of\
-  	  their own in the area near the Tiber River, but they disagreed on which hill to build it. Romulus\
-  	  preferred the Palatine Hill while Remus preferred the Aventine Hill. They decided leave the choice to\
-  	  the gods through a contest of augury. Remus first saw six auspicious birds but soon afterward Romulus\
-  	  saw twelve, and claimed to have won divine approval. Remus disagreed with this interpretation, so\
+      According to legend, Rome was founded by Romulus who was born with his twin brother Remus in Alba\
+      Longa to the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
+      were abandoned at birth and raised by a she-wolf. As young adults, the twins decided to build a city of\
+      their own in the area near the Tiber River, but they disagreed on which hill to build it. Romulus\
+      preferred the Palatine Hill while Remus preferred the Aventine Hill. They decided leave the choice to\
+      the gods through a contest of augury. Remus first saw six auspicious birds but soon afterward Romulus\
+      saw twelve, and claimed to have won divine approval. Remus disagreed with this interpretation, so\
       Romulus murdered him and founded the city himself.<br>\
       <br>\
       The Romans' origin story reveals much of how they understood themselves as a people. They are fighters\
@@ -34,24 +34,73 @@ var eventsInfo = {
       greatness from humble beginnings."
     },
     {
-      "name" : "Founding of the Republic",
-      "when" : "509 BCE"
+      "name" : "Founding of Byzantium",
+      "when" : "657 BCE",
+      "descr" : "The city that would one day become Constantinople was probably settled sometime in the seventh\
+      century BCE. The date 657 and the traditional (certainly mythical) story comes from the historian Tacitus.\
+      Allegedly, Byzantium was founded by the Greek king Byzas from Megara. The oracle of Delphi had told him to\
+      build his new city \"opposite the land of the blind.\" Byzas interpreted this to mean across the Bosphorus\
+      from the city of Chalcedon, whose founders must have been blind to overlook this far superior location just\
+      a few miles away."
     },
     {
-  	  "name" : "Dictatorship of Cincinnatus",
-  	  "when" : "458 BCE"
-  	},
+      "name" : "Founding of the Republic",
+      "when" : "509 BCE",
+      "descr" : "According to tradition, Tarquinius Superbus was a cruel tyrant who cemented a hatred of kings\
+      among the Roman population and was overthrown by popular uprising. The new republic\
+      was able to successfully ward off plots and external invasion aimed to reinstate Tarquinius.\
+      However, the prevalent modern view is that the monarchy at Rome was incidentally terminated through\
+      military defeat and foreign intervention. Porsenna, the Etruscan king\
+      of Clusium, defeated the Romans and expelled Tarquinius Superbus. (Britannica)\
+      The traditional 509 BCE date is also highly suspected of being a fabrication of later Romans who wanted the\
+      establishent of democracy in Rome to predate that of Athens.<br>\
+      <br>\
+      The king was replaced by two anually elected consuls who held absolute power, but had to relinquish it after\
+      a year. Additionally, one consul could veto the actions of his colleague. The early Roman Republic was more of\
+      an oligarchy of Patrician families wielding power over the lower classes."
+    },
+    {
+      "name" : "Battle of Lake Regillus",
+      "when" : "496 BCE",
+      "descr" : "Shortly after the abolition of the monarchy, a group of Latins under Roman rule revolted. A battle\
+      took place at Lake Regillus ending with Roman victory. The battle ended Latin resistance to Roman rule for\
+      150 years. It also marks the republic's first use of a dictator in response to external threat."
+    },
+    {
+      "name" : "Secession of the Plebs",
+      "when" : "494 BCE",
+      "descr" : "The Plebians were becoming increasingly concerned with debt bondage. In 494 BCE, they basically\
+      went on strike, forcing the hand of the Patricians. The office of tribune was created as a result."
+    },
+    {
+      "name" : "Dictatorship of Cincinnatus",
+      "when" : "458 BCE"
+    },
     {
       "name" : "Twelve Tables",
-      "when" : "451 BCE"
+      "when" : "451 BCE",
+      "descr" : "Overtime, pressure for political reform built up on the patricians. The plebians were getting\
+      tired of the patricians using Rome's army to enhance their wealth and power. Additionally, travelers from\
+      Magna Graecia brought news of Solon's political reforms in Athens. The biggest demand of the plebians was\
+      that Roman law be codified to protect against patrician subjectivity. So in 451 BCE, the laws of Rome\
+      were collected and inscribed on twelve bronze tablets to be publically displayed in the forum. These\
+      Twelve Tables covered a wide range of issues such as payment of debts, inheritance rights, upkeep of\
+      public sewers, divorce, and property boundary issues. Roman litigiousness is on display with a law that\
+      prescribed the death penalty for perjury, and a clause that forbade marriage between patrician and\
+      plebian would cause social friction by blocking plebians from the highest political offices.<br>\
+      <br>\
+      The Twelve Tables marks Rome's transition to a society of laws, an essential step toward political\
+      equality. The Roman system of laws would become one of the most complex of its time and have a profound\
+      impact on European law up to the present day."
     },
     {
-  	  "name" : "The Siege of Veii",
-  	  "when" : "396 BCE"
-  	},
+      "name" : "The Siege of Veii",
+      "when" : "396 BCE"
+    },
     {
       "name" : "Rome Sacked by Gauls",
-      "when" : "390 BCE"
+      "when" : "390 BCE",
+      "descr" : "Destroyed all primary documentation."
     },
     {
       "name" : "Battle of Cannae",
@@ -62,12 +111,24 @@ var eventsInfo = {
       "when" : "202 BCE"
     },
     {
-  	  "name" : "Sulla marches on Rome",
-  	  "when" : "88 BCE"
-  	},
+      "name" : "Sulla marches on Rome",
+      "when" : "88 BCE"
+    },
     {
       "name" : "Catiline Conspiracy",
-      "when" : "63 BCE"
+      "when" : "63 BCE",
+      "descr" : "After two expensive propaganda campaigns to win the consular elections of 64\
+      an 63 BCE, Catiline's debt forced him to resort to extra-legal means of securing power.\
+      He rhetorically placed himself as a populist savior advocating debt forgiveness, while\
+      amassing a makeshift army north of Rome. However, the winnng consul Cicero, with inside\
+      intelligence, slowly collected evidence of Cataline's plans at a power grab. On December\
+      8, Cicero exposed the conspiracy at a Senate meeting, with Cataline in attendence.\
+      Cataline attempted to defend himself by appealing to his prestigious Roman anscestry,\
+      but his reputation was ruined and he was forced to flee the city.<br>\
+      <br>\
+      Cicero's speech became a famous example of his oratory skill and of Latin rhetoric in\
+      general, and has been copied, circulated, and quoted ever since. It represents the success\
+      of republican institutions in warding off the ever-present threat of autocracy."
     },
     {
       "name" : "Crossing of the Rubicon",
@@ -78,23 +139,23 @@ var eventsInfo = {
       "when" : "15 March 44 BCE"
     },
     {
-  	  "name" : "Battle of Philippi",
-  	  "when" : "42 BCE",
-  	  "descr" : "The forces of the Second Triumvirate met the armies of Cassius and Brutus at\
-  	  Philippi where they had fortified a defensive position between mountains and a swamp. Mark\
-  	  Antony decided to make an unexpected attack from the swamp and was able to take the base.\
-  	  Cassius committed suicide, while Brutus regrouped for one last fateful battle before falling\
-  	  on his sword. The battle marks the end of republican opposition to the Caesarians, and the\
-  	  height of Mark Antony's military career."
-  	},
+      "name" : "Battle of Philippi",
+      "when" : "42 BCE",
+      "descr" : "The forces of the Second Triumvirate met the armies of Cassius and Brutus at\
+      Philippi where they had fortified a defensive position between mountains and a swamp. Mark\
+      Antony decided to make an unexpected attack from the swamp and was able to take the base.\
+      Cassius committed suicide, while Brutus regrouped for one last fateful battle before falling\
+      on his sword. The battle marks the end of republican opposition to the Caesarians, and the\
+      height of Mark Antony's military career."
+    },
     {
       "name" : "Battle of Actium",
       "when" : "31 BCE"
     },
     {
-  	  "name" : "Census of Quirinius",
-  	  "when" : "6"
-  	},
+      "name" : "Census of Quirinius",
+      "when" : "6"
+    },
     {
       "name" : "Battle of the Teutoburg Forest",
       "when" : "9"
@@ -130,6 +191,13 @@ var eventsInfo = {
     {
       "name" : "Year of Five Emperors",
       "when" : "193"
+    },
+    {
+      "name" : "Antonine Constitution",
+      "when" : "11 July 212 CE",
+      "descr" : "The emperor Caracalla issued an edict extending full Roman citizenship to all free\
+      inhabitants of the empire, eliminating the distinction between the conquerer and the\
+      conquered. The edict had the practical benefit of extending the tax burden to more people."
     },
     {
       "name" : "Sassanid Empire",
@@ -316,6 +384,12 @@ var eventsInfo = {
       "group" : "rulers"
     },
     {
+      "name"  : "Athenian Golden Age",
+      "start" : "480 BCE",
+      "end"   : "404 BCE",
+      "color" : "cyan"
+    },
+    {
       "name"  : "First Samnite War",
       "start" : "343 BCE",
       "end"   : "341 BCE",
@@ -382,18 +456,18 @@ var eventsInfo = {
       "color" : "#EE1111"
     },
     {
-  	  "name"  : "First Servile War",
-  	  "start" : "135 BCE",
-  	  "end"   : "132 BCE",
-  	  "color" : "#EE1111"
-  	},
-  	{
-  	  "name"  : "Marius",
-  	  "start" : "107 BCE",
-  	  "end"   : "100 BCE",
-  	  "color" : "blue",
-  	  "descr" : "Marius was consul an unprecedented seven times during 107, 104-100, and 86 BC."
-  	},
+      "name"  : "First Servile War",
+      "start" : "135 BCE",
+      "end"   : "132 BCE",
+      "color" : "#EE1111"
+    },
+    {
+      "name"  : "Marius",
+      "start" : "107 BCE",
+      "end"   : "100 BCE",
+      "color" : "blue",
+      "descr" : "Marius was consul an unprecedented seven times during 107, 104-100, and 86 BC."
+    },
     {
       "name"  : "Social War",
       "start" : "91 BCE",
@@ -413,12 +487,12 @@ var eventsInfo = {
       "color" : "#EE1111"
     },
     {
-  	  "name"  : "First Triumvirate",
-  	  "start" : "60 BCE",
-  	  "end"   : "53 BCE",
-  	  "color" : "blue",
-  	  "descr" : "Informal political alliance among Julius Caesar, Crassus, and Pompey"
-  	},
+      "name"  : "First Triumvirate",
+      "start" : "60 BCE",
+      "end"   : "53 BCE",
+      "color" : "blue",
+      "descr" : "Informal political alliance among Julius Caesar, Crassus, and Pompey"
+    },
     {
       "name"  : "Gallic Wars",
       "start" : "58 BCE",
@@ -426,16 +500,16 @@ var eventsInfo = {
       "color" : "#EE1111"
     },
     {
-  	  "name"  : "Second Triumvirate",
-  	  "start" : "43 BCE",
-  	  "end"   : "32 BCE",
-  	  "color" : "blue",
-  	  "descr" : "Officially the \"triumvirate for organizing the republic\", the Second Triumvirate was\
-  	  a political alliance among Octavian, Antony, and Lepidus. Though relations between Octavian and\
-  	  Antony were strained, their aliiance was held together by their common republican enemies Cassius\
-  	  and Brutus. The triumvirate was legally ratified by the Senate and ruled Rome as essentially a\
-  	  military dictatorship."
-  	},
+      "name"  : "Second Triumvirate",
+      "start" : "43 BCE",
+      "end"   : "32 BCE",
+      "color" : "blue",
+      "descr" : "Officially the \"triumvirate for organizing the republic\", the Second Triumvirate was\
+      a political alliance among Octavian, Antony, and Lepidus. Though relations between Octavian and\
+      Antony were strained, their alliance was held together by their common republican enemies Cassius\
+      and Brutus. The triumvirate was legally ratified by the Senate and ruled Rome as essentially a\
+      military dictatorship."
+    },
     {
       "name"  : "Augustus",
       "start" : "27 BCE",
@@ -451,25 +525,25 @@ var eventsInfo = {
       27 BC, the Senate granted him the title 'Augustus' making him the first of the people retroactively\
       called the Roman emperors. His charisma, skill, generosity, and longevity cemented the transition from\
       republic to empire.<br>\
-  	  <b>Administrative</b> He built a permanent civil-service and administrative bureaucracy consisting\
-  	  of slaves and ex-slaves which provided professionalism of administration and continuity between\
-  	  leadership changes. He improved the productivity of the unwieldy Senate by creating a\
-  	  working-group of 30 men that actually made the legislation. He used his massive wealth to fund\
-  	  infrastructure projects such as roads, horse-relay stations, and aqueducts which improved\
-  	  communication and trade. He imposed a regular census to make the tax collection consistant and\
-  	  fair.<br>\
-  	  <b>Diplomacy/Military</b> Augustus thought the empire would soon become over-extended if it grew\
-  	  much bigger. He envisioned an empire that extended to the easily-defensible Danube\
-  	  and Elbe rivers. He settled a favorable peace with the Parthians which saw the return of the Roman\
-  	  legionary standards.<br>\
-  	  <b>Imperial Image & Authority</b> Augustus was the pioneer of the Princeps, or 'first citizen' model\
-  	  of emperor.\ Wary of the stigma surrounding absolute power, he advertized himself as the restorer of\
+      <b>Administrative</b> He built a permanent civil-service and administrative bureaucracy consisting\
+      of slaves and ex-slaves which provided professionalism of administration and continuity between\
+      leadership changes. He improved the productivity of the unwieldy Senate by creating a\
+      working-group of 30 men that actually made the legislation. He used his massive wealth to fund\
+      infrastructure projects such as roads, horse-relay stations, and aqueducts which improved\
+      communication and trade. He imposed a regular census to make the tax collection consistant and\
+      fair.<br>\
+      <b>Diplomacy/Military</b> Augustus thought the empire would soon become over-extended if it grew\
+      much bigger. He envisioned an empire that extended to the easily-defensible Danube\
+      and Elbe rivers. He settled a favorable peace with the Parthians which saw the return of the Roman\
+      legionary standards.<br>\
+      <b>Imperial Image & Authority</b> Augustus was the pioneer of the Princeps, or 'first citizen' model\
+      of emperor.\ Wary of the stigma surrounding absolute power, he advertized himself as the restorer of\
       the republic. Ironically, the common Romans, tired of the old republican oligarchy, often insisted\
       he seize more power.<br>\
-  	  <b>Religion & Morality</b> He instituted 'morality laws' to try to restore traditional Roman virtue.\
-  	  He outlawed adultery, provided benefits for having children, and made it hard to be single. These\
-  	  laws had little effect though. He also ushered in a revival of Roman religious practices and\
-  	  festivities."
+      <b>Religion & Morality</b> He instituted 'morality laws' to try to restore traditional Roman virtue.\
+      He outlawed adultery, provided benefits for having children, and made it hard to be single. These\
+      laws had little effect though. He also ushered in a revival of Roman religious practices and\
+      festivities."
     },
     {
       "name"  : "Tiberius",
@@ -863,11 +937,26 @@ var eventsInfo = {
       "start" : "461",
       "end"   : "472",
       "color" : "orange"
+    },
+    {
+      "name"  : "Theodoric the Great",
+      "start" : "493 CE",
+      "end"   : "526 CE",
+      "color" : "orange",
+      "descr" : "Theodoric ruled as the King of the Ostrogoths from 475 and as King of Italy from\
+      493"
+    },
+    {
+      "name"  : "Justinian",
+      "start" : "1 April 527 CE",
+      "end"   : "14 November 565 CE",
+      "color" : "#7851A9",
+      "group" : "rulers"
     }
   ],
   "maps" : [
     {
-      "title" : "The Mediterranian world before the Second Punic War",
+      "title" : "The Mediterranean world before the Second Punic War",
       "when"  : "218 BCE",
       "image" : "maps/RE218BC.png"
     },
