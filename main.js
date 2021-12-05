@@ -8,13 +8,13 @@ var intervals2pixels;
 
 var timespan = eventsInfo.end - eventsInfo.start;
 
-function draw() {
+// set by user interaction
+var zoom = 1.0;
+var stretch = 1.0;
+
+function init() {
   svg = document.getElementById('svg');
-  svg.style.width = renderInfo.widthPx + "px";
-  //svg.style.height = renderInfo.heightPx + "px";
-  svg.style.height = "100%";
   descrBox = document.getElementById('descr-box');
-  intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
   // Parse dates (this really shouldn't happen here)
   for (var evnt of eventsInfo.events) {
@@ -27,6 +27,16 @@ function draw() {
   for (var map of eventsInfo.maps) {
     map.when = parseDate(map.when).year;
   }
+
+  renderInfo.widthPxOrig = renderInfo.widthPx;
+  redraw();
+}
+
+function redraw() {
+  svg.innerHTML = "";
+  svg.setAttribute("viewBox", `0 0 ${renderInfo.widthPx} ${renderInfo.heightPx}`);
+  svg.setAttribute("width", zoom * renderInfo.widthPx);
+  intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
   drawMainLine(eventsInfo, renderInfo.heightPx / 3);
   var partitionedEvents = partition(eventsInfo.intervalEvents, (e) => {return e.group;});
@@ -122,6 +132,7 @@ function drawIntervalEvent(evnt, yPx, labelstyle) {
   var evntPxStart = (evnt.start - eventsInfo.start) / timespan * renderInfo.widthPx;
   var evntPxLength = (evnt.end - evnt.start) / timespan * renderInfo.widthPx;
   var g = document.createElementNS(svgns, "g");
+  g.setAttribute("class", "changeOnHover");
 
   // draw rounded rect
   var rect = document.createElementNS(svgns, "rect");
@@ -207,22 +218,22 @@ function drawEventText(text, textXPx, textYPx, textWidth) {
   svg.appendChild(line);
 }
 
-// TODO: fix
 function drawMaps(maps, yPx) {
   for (let map of maps) {
     let xPx = (map.when - eventsInfo.start) / timespan * renderInfo.widthPx;
-    let icon = document.createElementNS(svgns, 'img');
+    let icon = document.createElementNS(svgns, 'image');
     icon.onclick = function() {
       descrBox.style.width = 'inherit';
       descrBox.style.backgroundColor = 'white';
       descrBox.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
       descrBox.hidden = false;
     };
-    icon.setAttribute("xlink:href", "mapicon3.png");
-    icon.setAttribute("x", (xPx-15));
-    icon.setAttribute("y", (yPx-30));
-    icon.setAttribute("width", 30);
-    icon.setAttribute("height", 30);
+    icon.setAttribute("class", "changeOnHover")
+    icon.setAttribute("href", "map.svg");
+    icon.setAttribute("x", (xPx-25));
+    icon.setAttribute("y", (yPx-55));
+    icon.setAttribute("width", 50);
+    icon.setAttribute("height", 50);
     svg.appendChild(icon);
   }
 }
@@ -259,6 +270,7 @@ function mkLabel(text, x, y, textWidth=0) {
 function mkButtonLabel(text, x, y, textWidth=0) {
   var g = mkLabel(text, x, y, textWidth);
   g.onclick = getDisplayEventInfoFunction(text);
+  g.setAttribute("class", "changeOnHover");
   return g;
 
 }
@@ -285,4 +297,15 @@ function getTextWidth(text, font) {
   context.font = font;
   const metrics = context.measureText(text);
   return metrics.width;
+}
+
+function setZoom() {
+  zoom = document.getElementById("zoom-input").value / 100;
+  svg.setAttribute("width", zoom * renderInfo.widthPx);
+}
+
+function setStretch() {
+  stretch = document.getElementById("stretch-input").value / 100;
+  renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
+  redraw();
 }

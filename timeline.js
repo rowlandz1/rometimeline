@@ -525,6 +525,7 @@ var eventsInfo = {
       27 BC, the Senate granted him the title 'Augustus' making him the first of the people retroactively\
       called the Roman emperors. His charisma, skill, generosity, and longevity cemented the transition from\
       republic to empire.<br>\
+      <br>\
       <b>Administrative</b> He built a permanent civil-service and administrative bureaucracy consisting\
       of slaves and ex-slaves which provided professionalism of administration and continuity between\
       leadership changes. He improved the productivity of the unwieldy Senate by creating a\
@@ -532,14 +533,17 @@ var eventsInfo = {
       infrastructure projects such as roads, horse-relay stations, and aqueducts which improved\
       communication and trade. He imposed a regular census to make the tax collection consistant and\
       fair.<br>\
+      <br>\
       <b>Diplomacy/Military</b> Augustus thought the empire would soon become over-extended if it grew\
       much bigger. He envisioned an empire that extended to the easily-defensible Danube\
       and Elbe rivers. He settled a favorable peace with the Parthians which saw the return of the Roman\
       legionary standards.<br>\
+      <br>\
       <b>Imperial Image & Authority</b> Augustus was the pioneer of the Princeps, or 'first citizen' model\
       of emperor.\ Wary of the stigma surrounding absolute power, he advertized himself as the restorer of\
       the republic. Ironically, the common Romans, tired of the old republican oligarchy, often insisted\
       he seize more power.<br>\
+      <br>\
       <b>Religion & Morality</b> He instituted 'morality laws' to try to restore traditional Roman virtue.\
       He outlawed adultery, provided benefits for having children, and made it hard to be single. These\
       laws had little effect though. He also ushered in a revival of Roman religious practices and\
@@ -770,10 +774,12 @@ var eventsInfo = {
       direct payment of raw goods. His Edict on Prices attempted to curb inflation by\
       tabulating for each marketable good a maximum prices. However, the edict was\
       unenforceable and was abandoned after his abdication.<br>\
+      <br>\
       <b>Imperial Image</b> Hy styled the emperorship as a divinely appointed position\
       to remove the ever-shifting allegiance of the army as the source of imperial legitimacy.\
       This shift in perception from \"first among equals\" to \"lord and master\" typically\
       marks the boundary between the Principate and Dominate forms of government.<br>\
+      <br>\
       <b>Religious Persecutions</b> In 303, he ordered the persecution of Christians and\
       Manichaeans from fear that the pagan gods would turn their backs on Rome. However,\
       by this time, Christianity was too established and had too much sympathy to justify\
