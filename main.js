@@ -39,12 +39,12 @@ function redraw() {
   svg.setAttribute("width", zoom * renderInfo.widthPx);
   intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
-  drawMainLine(eventsInfo, renderInfo.heightPx / 3);
+  drawMainLine(eventsInfo, renderInfo.heightPx / 2);
   var toDraw = eventsInfo.intervalEvents.filter((e) => {return visibleGroups.includes(e.group);});
-  drawIntervalEvents(toDraw, renderInfo.heightPx/3 + renderInfo.eventHeightPx/2 + 5, "align-left");
-  drawEvents(eventsInfo.events, renderInfo.heightPx / 3 - 8, 70);
-  drawMaps(eventsInfo.maps, renderInfo.heightPx / 3 - 15);
-  drawTimeMarkers(eventsInfo, renderInfo.heightPx / 3);
+  drawIntervalEvents(toDraw, renderInfo.heightPx/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
+  drawEvents(eventsInfo.events, renderInfo.heightPx / 2 - 8, 70);
+  drawMaps(eventsInfo.maps, renderInfo.heightPx / 2 - 15);
+  drawTimeMarkers(eventsInfo, renderInfo.heightPx / 2);
 }
 
 function drawMainLine(line, yPx) {

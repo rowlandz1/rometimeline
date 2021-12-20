@@ -19,17 +19,25 @@
         position: absolute;
         inset: 0px 0px 0px 0px;
         overflow-x: scroll;
+      }
+      #scroll-background {
+        position: absolute;
+        background: url("scroll.jpg") repeat scroll;
+        top: 0px;
+        bottom: 0px;
+        display: flex;
         overflow-y: scroll;
       }
       #svg {
-        background: url("scroll.jpg") repeat scroll;
+        margin: auto;
       }
       #descr-box {
         position: absolute;
         left: 5px;
         top: 5px;
         width: 500px;
-        max-height: 500px;
+        max-width: 70vw;
+        max-height: 70vh;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
         font: 14px Laila;
@@ -41,7 +49,7 @@
       }
       #settings-box {
         position: absolute;
-        left: 5px;
+        right: 5px;
         bottom: 20px;
         width: 150px;
         background-color: rgba(255, 255, 255, 0.9);
@@ -64,7 +72,9 @@
   </head>
   <body onload="init();">
     <div id="main">
-      <svg id="svg"></svg>
+      <div id="scroll-background">
+        <svg id="svg"></svg>
+      </div>
     </div>
     <div id="descr-box"></div>
     <div id="settings-box">

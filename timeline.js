@@ -1,6 +1,6 @@
 var renderInfo = {
   "widthPx"        : 10000,
-  "heightPx"       : 1080,
+  "heightPx"       : 500,
   "eventHeightPx"  : 30,
   "eventSpacingPx" : 5
 };
