@@ -48,7 +48,6 @@
         border-radius: 10px;
         font: 14px Laila;
         padding: 10px;
-
       }
       #settings-box input {
         position: absolute;
@@ -65,12 +64,14 @@
   </head>
   <body onload="init();">
     <div id="main">
-      <svg id="svg" width="5000"></svg>
+      <svg id="svg"></svg>
     </div>
     <div id="descr-box"></div>
     <div id="settings-box">
-      <label>zoom</label><input id="zoom-input" type="number" onchange="setZoom();"><br><br>
-      <label>stretch</label><input id="stretch-input" type="number" onchange="setStretch();">
+      <label>zoom</label><input id="zoom-input" type="number" value="100" onchange="setZoom();"><br><br>
+      <label>stretch</label><input id="stretch-input" type="number" value="100" onchange="setStretch();"><br><br>
+      <label>rulers</label><input id="rulers-checkbox" type="checkbox" checked="true" onchange="userSettingChanged();"><br>
+      <label>others</label><input id="others-checkbox" type="checkbox" checked="true" onchange="userSettingChanged();">
     </div>
   </body>
 </html>

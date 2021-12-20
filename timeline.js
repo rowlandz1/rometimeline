@@ -9,7 +9,6 @@ var eventsInfo = {
   "start"      : -800,
   "end"        : 600,
   "eraSize"    : 100,
-  "groupOrder" : ["rulers", "undefined"],
   "events"  : [
     {
       "name" : "Founding of Rome",
@@ -31,7 +30,8 @@ var eventsInfo = {
       <br>\
       The Romans' origin story reveals much of how they understood themselves as a people. They are fighters\
       at heart, though tempered by religious ritual and superstition. They built civilization from savagery,\
-      greatness from humble beginnings."
+      greatness from humble beginnings.<br>\
+      <img src='images/romulus_and_remus.jpg'>"
     },
     {
       "name" : "Founding of Byzantium",
@@ -74,18 +74,40 @@ var eventsInfo = {
     },
     {
       "name" : "Dictatorship of Cincinnatus",
-      "when" : "458 BCE"
+      "when" : "458 BCE",
+      "descr" : "Like most of early Roman history, the story of Cincinnatus is\
+      at least highly embellished, but historians largely consider him a historical\
+      figure and the essential details of his dictatorship to be accurate.\
+      Cincinnatus was originally a patrician of high standing, but was forced to sell \
+      his property and retire to a small farm to pay off a debt. In 458, the Aequians\
+      managed to corner a Roman army on Mount Algidus. The public panicked at the\
+      prospect of the annihilation of an army and called for Cincinnatus to be named\
+      dictator. A small delegation met Cincinnatus on his farm and he agreed to take\
+      on the responsibility demanded of him. Bestowed with absolute power, he led a\
+      small army to free the trapped Roman troops and defeat the Aequians. Upon a\
+      swift victory, he celebrated a triumph in Rome and promptly relinquished his\
+      power to go back to his farm.<br>\
+      <br>\
+      At first glance, there was nothing particularly remarkable about Cincinnatus\
+      that would warrant his legendary status. He was neither the first dictator, nor\
+      the only dictator to voluntarily relinquish power. However, he was the first\
+      man to be given absolute power who had no memory of the tyranny of the monarchs.\
+      Therefore, Cincinnatus accepted and resigned the dictatorship purely out of a\
+      sense of duty to the Republic, not fear of monarchy. Later Romans would hold\
+      up Cincinnatus as the model of Republican virtue&mdash;a soldier in times of war\
+      and a laborer in times of peace."
     },
     {
       "name" : "Twelve Tables",
       "when" : "451 BCE",
-      "descr" : "Overtime, pressure for political reform built up on the patricians. The plebians were getting\
-      tired of the patricians using Rome's army to enhance their wealth and power. Additionally, travelers from\
-      Magna Graecia brought news of Solon's political reforms in Athens. The biggest demand of the plebians was\
-      that Roman law be codified to protect against patrician subjectivity. So in 451 BCE, the laws of Rome\
-      were collected and inscribed on twelve bronze tablets to be publically displayed in the forum. These\
-      Twelve Tables covered a wide range of issues such as payment of debts, inheritance rights, upkeep of\
-      public sewers, divorce, and property boundary issues. Roman litigiousness is on display with a law that\
+      "descr" : "Overtime, pressure for political reform built up on the patricians. The plebians\
+      were tired of fighting in Rome's army while the patricians sat on the sidelines and reaped\
+      the spoils of war. Additionally, travelers from Magna Graecia brought news of Solon's political\
+      reforms in Athens. The biggest demand of the plebians was that Roman law be codified to protect\
+      against patrician subjectivity. So in 451 BCE, the laws of Rome were collected and inscribed on\
+      twelve bronze tablets to be publically displayed in the forum. These Twelve Tables covered a\
+      wide range of issues such as payment of debts, inheritance rights, upkeep of public sewers,\
+      divorce, and property boundary issues. Roman litigiousness is on display with a law that\
       prescribed the death penalty for perjury, and a clause that forbade marriage between patrician and\
       plebian would cause social friction by blocking plebians from the highest political offices.<br>\
       <br>\
@@ -94,13 +116,32 @@ var eventsInfo = {
       impact on European law up to the present day."
     },
     {
-      "name" : "The Siege of Veii",
-      "when" : "396 BCE"
-    },
-    {
       "name" : "Rome Sacked by Gauls",
       "when" : "390 BCE",
-      "descr" : "Destroyed all primary documentation."
+      "descr" : "Rome was sacked by the Senones, a Gallic tribe led by warrior-chief Brennus. Traditionally,\
+      Brennus sacked the city in 390 motivated by a minor political debacle. Although historians\
+      speculate that the sack happened a few years later in connection with a Syracusan attack\
+      against a Roman ally in Sicily. The Senones were asked to tie the Romans down while\
+      Syracuse made its move.<br>\
+      <br>\
+      The ruthless and unfamiliar Gallic forces easily broke the Roman army and advanced on Rome\
+      itself. The remaining Roman forces panicked and holed up in the citadel, leaving the city\
+      itself undefended. The Gauls were able to walk in and carry off Rome's wealth. The Romans\
+      in the citadel held out for seven months after which the Gauls agreed to leave. Despite\
+      their city being destroyed the Romans decided to stay and rebuild.<br>\
+      <br>\
+      The sacking destroyed all primary documentation of Rome's history, so we are left with only\
+      legends and hearsay about prior events."
+    },
+    {
+      "name" : "Lex Genucia",
+      "when" : "342 BCE",
+      "descr" : "Since the founding of the Republic, the plebians struggled with the patricians\
+      for more political power. According to tradition, plebians were forbidden from holding the\
+      consulship, the highest political office, although modern historians believe the ban is\
+      ficticious and there were in fact plebian consuls. Regardless, the political struggle between\
+      the two groups lead to the passage of the Lex Genucia which required one of the yearly consuls\
+      to be a plebian."
     },
     {
       "name" : "Battle of Cannae",
@@ -331,6 +372,10 @@ var eventsInfo = {
     {
       "name" : "Augustulus Deposed",
       "when" : "476"
+    },
+    {
+      "name" : "Birth of Muhammad",
+      "when" : "570 CE"
     }
   ],
   "intervalEvents"  : [
@@ -390,16 +435,58 @@ var eventsInfo = {
       "color" : "cyan"
     },
     {
+      "name"  : "War with Veii",
+      "start" : "405 BCE",
+      "end"   : "396 BCE",
+      "color" : "#EE1111",
+      "descr" : "The Etruscan city of Veii had long been a rival of Rome. It was situated just twelve\
+      miles away on highly coveted land north of the Tiber river. Around the turn of the\
+      century, Rome felt militarily secure enough to finally make a move.\
+      For years, the Romans were unable to take the heavily fortified city. Finally, dictator Marcus\
+      Verias Camillus set his men digging a mine that led directly into Veii's citadel. When the\
+      mine was complete, a small group of soldiers infiltrated the citadel and threw open the\
+      gates of the city to the rest of the army. The Romans slaughtered the shocked citizens\
+      and hauled off the city's riches. The city would later be resettled by Romans.<br>\
+      <br>\
+      The conflict with Veii was a milestone for Romans and a turning point for the Italian region as\
+      a whole. The Romans' prolonged siege required them to field an army year-round, a previously\
+      unprecedented policy. To placate the soldiers, who could not go back to their farms, soldier-pay\
+      was introduced for the first time. The destruction of Veii would also mark the end of Etruscan\
+      dominance over the northern Italian peninsula. The disunited Etruscan city-states would be\
+      squeezed by the expanding Romans to the south and invading Gallic tribes to the north."
+    },
+    {
       "name"  : "First Samnite War",
       "start" : "343 BCE",
       "end"   : "341 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "descr" : "Samnites were semi-nomadic hill-tribe. They migrated out of the hills of\
+      central Italy onto the lush plains surrounding Capua. The citizens sent envoys\
+      to Rome begging for assistance fending off the foreign threat, but Rome refused\
+      due to a treaty they still held with the Samnites. Desperate, Capua offered to\
+      become a Roman subject which the Senate obviously accepted. The Samnites were\
+      now illegally encroaching on Roman territory which was a violation of the\
+      treaty, so the Romans declared war. The Romans successfully drove off the\
+      Samnites, but the Samnites proved themselves to be a worthy adversary."
     },
     {
       "name"  : "Latin War",
       "start" : "340 BCE",
       "end"   : "338 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "descr" : "At the close of the First Samnite War, the Campanians and Latins wanted\
+      to keep fighting to stamp out Samnite aggression and extract more spoils. Some of\
+      the Latin tribes took Rome's unwillingness to continue as a sign of weakness and\
+      rebelled. Being neighbors and former allies, the Roman and Latin armies were similar\
+      in almost every way, from formation to tactics to equipment. However, the Roman\
+      forces simply proved to be stronger. Latin independence from Rome was crushed once\
+      and for all.<br>\
+      <br>\
+      The Romans' treatment of the defeated Latins is one of the first clear instances of\
+      typical Roman foreign policy toward conquered peoples. Each tribe received treatment\
+      based on its degree of hostility toward Rome. Tribes that never joined the rebellion\
+      were granted full Roman citizenship while the most rebellious tribes were driven off\
+      their land, which was recolonized."
     },
     {
       "name"  : "Alexander the Great",
@@ -411,7 +498,24 @@ var eventsInfo = {
       "name"  : "Second Samnite War",
       "start" : "326 BCE",
       "end"   : "304 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "descr" : "The first several years of the war went well for the Romans, but in 321 BCE, the\
+      Romans suffered one of the most humiliating defeats in their history. The Samnites\
+      had cleverly trapped the Romans in a narrow pass called Caudine Forks. Without raising\
+      a single sword, the Romans had to surrender. The Samnites let them go, but forced them\
+      to pass under the yolk, a fate worse than death in the honor-crazy classical world.\
+      Five years passed with no fighting, but the Romans recovered and for a decade fought\
+      a war on two fronts&mdash;the Samnites to the south and their Etruscan allies to the north.\
+      The Etruscans eventually abandoned the war effort, and the Samnites soon followed suit.\
+      <br><br>\
+      The Second Samnite War was transformative. Around this time, the Romans adopted a far more\
+      imperialistic attitude toward its neighbors, and the Second Samnite War was one of the first\
+      instances of Roman foreign conquest and subjegation. The Via Appia, constructed for\
+      supplying troops in Samnium, would facilitate trade with Magna Graecia, while forts\
+      built in Etruria projected Roman power further north. Most importantly, battling an\
+      unfamiliar enemy in rugged terrain forced the Romans to abandon the traditional Greek\
+      phalanx and invent the famous maniple legion. The war took Rome from being a mere\
+      regional power to a position poised to conquer all of Italy."
     },
     {
       "name"  : "Third Samnite War",

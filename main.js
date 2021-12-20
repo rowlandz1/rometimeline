@@ -11,6 +11,7 @@ var timespan = eventsInfo.end - eventsInfo.start;
 // set by user interaction
 var zoom = 1.0;
 var stretch = 1.0;
+var visibleGroups = ["rulers", undefined];
 
 function init() {
   svg = document.getElementById('svg');
@@ -39,12 +40,8 @@ function redraw() {
   intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
   drawMainLine(eventsInfo, renderInfo.heightPx / 3);
-  var partitionedEvents = partition(eventsInfo.intervalEvents, (e) => {return e.group;});
-  var yPx = renderInfo.heightPx/3 + renderInfo.eventHeightPx/2 + 5;
-  for (var group of eventsInfo.groupOrder) {
-    var h = drawIntervalEvents(partitionedEvents[group], yPx, "align-left");
-    yPx += h;
-  }
+  var toDraw = eventsInfo.intervalEvents.filter((e) => {return visibleGroups.includes(e.group);});
+  drawIntervalEvents(toDraw, renderInfo.heightPx/3 + renderInfo.eventHeightPx/2 + 5, "align-left");
   drawEvents(eventsInfo.events, renderInfo.heightPx / 3 - 8, 70);
   drawMaps(eventsInfo.maps, renderInfo.heightPx / 3 - 15);
   drawTimeMarkers(eventsInfo, renderInfo.heightPx / 3);
@@ -207,7 +204,7 @@ function drawEventStalk(pointXPx, pointYPx, textYPx) {
 }
 
 function drawEventText(text, textXPx, textYPx, textWidth) {
-  svg.appendChild(mkButtonLabel(text, textXPx, textYPx, textWidth));
+  var buttonLabel = mkButtonLabel(text, textXPx, textYPx, textWidth)
 
   var line = document.createElementNS(svgns, "line");
   line.setAttribute("x1", textXPx);
@@ -215,7 +212,8 @@ function drawEventText(text, textXPx, textYPx, textWidth) {
   line.setAttribute("x2", textXPx + textWidth);
   line.setAttribute("y2", textYPx + 3);
   line.setAttribute("style", "stroke: #444444; stroke-width: 2px");
-  svg.appendChild(line);
+  buttonLabel.appendChild(line);
+  svg.appendChild(buttonLabel);
 }
 
 function drawMaps(maps, yPx) {
@@ -224,7 +222,7 @@ function drawMaps(maps, yPx) {
     let icon = document.createElementNS(svgns, 'image');
     icon.onclick = function() {
       descrBox.style.width = 'inherit';
-      descrBox.style.backgroundColor = 'white';
+      //descrBox.style.backgroundColor = 'white';
       descrBox.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
       descrBox.hidden = false;
     };
@@ -307,5 +305,16 @@ function setZoom() {
 function setStretch() {
   stretch = document.getElementById("stretch-input").value / 100;
   renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
+  redraw();
+}
+
+function userSettingChanged() {
+  stretch = document.getElementById("stretch-input").value / 100;
+  renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
+
+  visibleGroups = [];
+  if (document.getElementById("rulers-checkbox").checked) visibleGroups.push("rulers");
+  if (document.getElementById("others-checkbox").checked) visibleGroups.push(undefined);
+
   redraw();
 }
