@@ -13,51 +13,17 @@ var eventsInfo = {
     {
       "name" : "Founding of Rome",
       "when" : "753 BCE",
-      "descr" : "Little is known of the actual origins of the city. The archaeological record indicates\
-      that Rome developed from various Italic tribes who migrated from the Alban Hills into the\
-      agriculturally-superior valley near the Tiber River. The discovery of some fortification walls\
-      on the Palatine Hill that probably date to the mid-eighth century BC seem to justify the traditional\
-      753 BC date for the city's founding as reasonable.<br>\
-      <br>\
-      According to legend, Rome was founded by Romulus who was born with his twin brother Remus in Alba\
-      Longa to the vestal virgin Rhea Silvia and the god Mars. Seen by the king as a threat to power, they\
-      were abandoned at birth and raised by a she-wolf. As young adults, the twins decided to build a city of\
-      their own in the area near the Tiber River, but they disagreed on which hill to build it. Romulus\
-      preferred the Palatine Hill while Remus preferred the Aventine Hill. They decided leave the choice to\
-      the gods through a contest of augury. Remus first saw six auspicious birds but soon afterward Romulus\
-      saw twelve, and claimed to have won divine approval. Remus disagreed with this interpretation, so\
-      Romulus murdered him and founded the city himself.<br>\
-      <br>\
-      The Romans' origin story reveals much of how they understood themselves as a people. They are fighters\
-      at heart, though tempered by religious ritual and superstition. They built civilization from savagery,\
-      greatness from humble beginnings.<br>\
-      <img src='images/romulus_and_remus.jpg'>"
+      "file": "descrs/founding_of_rome.html"
     },
     {
       "name" : "Founding of Byzantium",
       "when" : "657 BCE",
-      "descr" : "The city that would one day become Constantinople was probably settled sometime in the seventh\
-      century BCE. The date 657 and the traditional (certainly mythical) story comes from the historian Tacitus.\
-      Allegedly, Byzantium was founded by the Greek king Byzas from Megara. The oracle of Delphi had told him to\
-      build his new city \"opposite the land of the blind.\" Byzas interpreted this to mean across the Bosphorus\
-      from the city of Chalcedon, whose founders must have been blind to overlook this far superior location just\
-      a few miles away."
+      "file": "descrs/founding_of_byzantium.html"
     },
     {
       "name" : "Founding of the Republic",
       "when" : "509 BCE",
-      "descr" : "According to tradition, Tarquinius Superbus was a cruel tyrant who cemented a hatred of kings\
-      among the Roman population and was overthrown by popular uprising. The new republic\
-      was able to successfully ward off plots and external invasion aimed to reinstate Tarquinius.\
-      However, the prevalent modern view is that the monarchy at Rome was incidentally terminated through\
-      military defeat and foreign intervention. Porsenna, the Etruscan king\
-      of Clusium, defeated the Romans and expelled Tarquinius Superbus. (Britannica)\
-      The traditional 509 BCE date is also highly suspected of being a fabrication of later Romans who wanted the\
-      establishent of democracy in Rome to predate that of Athens.<br>\
-      <br>\
-      The king was replaced by two anually elected consuls who held absolute power, but had to relinquish it after\
-      a year. Additionally, one consul could veto the actions of his colleague. The early Roman Republic was more of\
-      an oligarchy of Patrician families wielding power over the lower classes."
+      "file" : "descrs/founding_of_the_republic.html"
     },
     {
       "name" : "Battle of Lake Regillus",
@@ -75,63 +41,17 @@ var eventsInfo = {
     {
       "name" : "Dictatorship of Cincinnatus",
       "when" : "458 BCE",
-      "descr" : "Like most of early Roman history, the story of Cincinnatus is\
-      at least highly embellished, but historians largely consider him a historical\
-      figure and the essential details of his dictatorship to be accurate.\
-      Cincinnatus was originally a patrician of high standing, but was forced to sell \
-      his property and retire to a small farm to pay off a debt. In 458, the Aequians\
-      managed to corner a Roman army on Mount Algidus. The public panicked at the\
-      prospect of the annihilation of an army and called for Cincinnatus to be named\
-      dictator. A small delegation met Cincinnatus on his farm and he agreed to take\
-      on the responsibility demanded of him. Bestowed with absolute power, he led a\
-      small army to free the trapped Roman troops and defeat the Aequians. Upon a\
-      swift victory, he celebrated a triumph in Rome and promptly relinquished his\
-      power to go back to his farm.<br>\
-      <br>\
-      At first glance, there was nothing particularly remarkable about Cincinnatus\
-      that would warrant his legendary status. He was neither the first dictator, nor\
-      the only dictator to voluntarily relinquish power. However, he was the first\
-      man to be given absolute power who had no memory of the tyranny of the monarchs.\
-      Therefore, Cincinnatus accepted and resigned the dictatorship purely out of a\
-      sense of duty to the Republic, not fear of monarchy. Later Romans would hold\
-      up Cincinnatus as the model of Republican virtue&mdash;a soldier in times of war\
-      and a laborer in times of peace."
+      "file" : "descrs/dictatorship_of_cincinnatus.html"
     },
     {
       "name" : "Twelve Tables",
       "when" : "451 BCE",
-      "descr" : "Overtime, pressure for political reform built up on the patricians. The plebians\
-      were tired of fighting in Rome's army while the patricians sat on the sidelines and reaped\
-      the spoils of war. Additionally, travelers from Magna Graecia brought news of Solon's political\
-      reforms in Athens. The biggest demand of the plebians was that Roman law be codified to protect\
-      against patrician subjectivity. So in 451 BCE, the laws of Rome were collected and inscribed on\
-      twelve bronze tablets to be publically displayed in the forum. These Twelve Tables covered a\
-      wide range of issues such as payment of debts, inheritance rights, upkeep of public sewers,\
-      divorce, and property boundary issues. Roman litigiousness is on display with a law that\
-      prescribed the death penalty for perjury, and a clause that forbade marriage between patrician and\
-      plebian would cause social friction by blocking plebians from the highest political offices.<br>\
-      <br>\
-      The Twelve Tables marks Rome's transition to a society of laws, an essential step toward political\
-      equality. The Roman system of laws would become one of the most complex of its time and have a profound\
-      impact on European law up to the present day."
+      "file" : "descrs/twelve_tables.html"
     },
     {
       "name" : "Rome Sacked by Gauls",
       "when" : "390 BCE",
-      "descr" : "Rome was sacked by the Senones, a Gallic tribe led by warrior-chief Brennus. Traditionally,\
-      Brennus sacked the city in 390 motivated by a minor political debacle. Although historians\
-      speculate that the sack happened a few years later in connection with a Syracusan attack\
-      against a Roman ally in Sicily. The Senones were asked to tie the Romans down while\
-      Syracuse made its move.<br>\
-      <br>\
-      The ruthless and unfamiliar Gallic forces easily broke the Roman army and advanced on Rome\
-      itself. The remaining Roman forces panicked and holed up in the citadel, leaving the city\
-      itself undefended. The Gauls were able to walk in and carry off Rome's wealth. The Romans\
-      in the citadel held out for seven months after which the Gauls agreed to leave. Despite\
-      their city being destroyed the Romans decided to stay and rebuild.<br>\
-      <br>\
-      The sacking destroyed all primary documentation of Rome's history, so we are left with only\
-      legends and hearsay about prior events."
+      "file" : "descrs/rome_sacked_by_gauls.html"
     },
     {
       "name" : "Lex Genucia",
@@ -158,18 +78,7 @@ var eventsInfo = {
     {
       "name" : "Catiline Conspiracy",
       "when" : "63 BCE",
-      "descr" : "After two expensive propaganda campaigns to win the consular elections of 64\
-      an 63 BCE, Catiline's debt forced him to resort to extra-legal means of securing power.\
-      He rhetorically placed himself as a populist savior advocating debt forgiveness, while\
-      amassing a makeshift army north of Rome. However, the winnng consul Cicero, with inside\
-      intelligence, slowly collected evidence of Cataline's plans at a power grab. On December\
-      8, Cicero exposed the conspiracy at a Senate meeting, with Cataline in attendence.\
-      Cataline attempted to defend himself by appealing to his prestigious Roman anscestry,\
-      but his reputation was ruined and he was forced to flee the city.<br>\
-      <br>\
-      Cicero's speech became a famous example of his oratory skill and of Latin rhetoric in\
-      general, and has been copied, circulated, and quoted ever since. It represents the success\
-      of republican institutions in warding off the ever-present threat of autocracy."
+      "file" : "descrs/catiline_conspiracy.html"
     },
     {
       "name" : "Crossing of the Rubicon",
@@ -255,28 +164,7 @@ var eventsInfo = {
     {
       "name" : "Battle of the Milvian Bridge",
       "when" : "312",
-      "descr" : "Constantine and Maxentius met in battle outside of Rome along the Tiber River.\
-      Although Constantine was outnumbered, the skill and loyalty of his veteran army far\
-      exceeded that of his opponent's. Constantine won handily and became the sole ruler of the\
-      western empire.<br>\
-      <br>\
-      The battle is most famous for the alleged divine intervention that assured Constantine's\
-      victory. As the story goes, Constantine was marching with his army when he saw a cross\
-      above the sun and the\
-      Greek words \"In this sign, conquer\" written alongside. That night, he also had\
-      a dream in which Christ told him to use the Chi-Rho symbol to defeat his enemies.\
-      The next morning, he painted the Chi-Rho on the shields of his soldiers and won the\
-      battle.<br>\
-      <br>\
-      Though the battle is often cited as the event that triggered Constantine's conversion to\
-      Christianity, it is unclear whether Constantine actually attributed his successes to the Christian\
-      God at this time. The historical details of Constantine's motivations were lost or twisted by\
-      the Christian propaganda later in his reign. His language and symbolism were\
-      general enough to be interpreted as either Christian or not. The Chi-Rho, for example, was already\
-      understood as an abbreviation of the Greek word <i>chrēston</i> (good), and was used by scholars to\
-      mark notable passages in a book. It is likely\
-      that his vague rhetoric was a conscious political choice meant to appeal to a broad audience of\
-      disgrungled monotheists and only retroactively changed to be explicitly Christian."
+      "file" : "descrs/battle_of_the_milvian_bridge.html"
     },
     {
       "name" : "Edict of Milan",
@@ -285,16 +173,7 @@ var eventsInfo = {
     {
       "name" : "Council of Nicea",
       "when" : "325",
-      "descr" : "The Council of Nicea was a meeting of bishops from all over the empire, called by\
-      Constantine, to settle schisms within Christianity, particularly the dispute between the Arians\
-      and cosubstantialists. Constantine himself, overseeing the proceedings, did not advocate for any\
-      particular position, but insisted that orthodoxy be established and that unity within the\
-      empire's new religion was of utmost importance.<br>\
-      <br>\
-      The council was partially successful in achieving Constantine's dream of a unified Christianity.\
-      It did much to foster connection between Christians across the empire and establish an official\
-      doctrine. However, the newly declared heretical beliefs did not disappear overnight. The Arians,\
-      for example, would fight bitterly for another several hundred years until their extinction."
+      "file" : "descrs/council_of_nicea.html"
     },
     {
       "name" : "Founding of Constantinople",
@@ -339,19 +218,7 @@ var eventsInfo = {
     {
       "name" : "Sack of Rome",
       "when" : "410",
-      "descr" : "Alaric, king of the Visigoths, was trying to extract concessions of land and\
-      supplies from Emperor Honorius in Ravenna. However, after two sieges of Rome, Honorius\
-      was still stubbornly resistant to negotiation. When Alaric's army was attacked by his\
-      blood enemy and Roman commander Sarus, he resorted to brute force. The Goths sieged\
-      Rome for a third time until slaves opened the Salarian gate. For three days, the Goths\
-      beat, raped, killed, destroyed, and looted, although churches and religious artifacts\
-      were left alone. This marks the first time Rome was sacked in nearly eight centuries.\
-      The population of the city would in time plummet from near a million people to only\
-      twenty-thousand.<br>\
-      <br>\
-      Though of little political significance, the sack of Rome was a major blow to morale.\
-      It fueled the growing tendency to ascribe the empire's downfall to the abandonment of\
-      paganism, prompting Augustine's rebuttal in <i>The City of God</i>."
+      "file" : "descrs/sack_of_rome.html"
     },
     {
       "name" : "Vandal Kingdom Established",
@@ -439,21 +306,7 @@ var eventsInfo = {
       "start" : "405 BCE",
       "end"   : "396 BCE",
       "color" : "#EE1111",
-      "descr" : "The Etruscan city of Veii had long been a rival of Rome. It was situated just twelve\
-      miles away on highly coveted land north of the Tiber river. Around the turn of the\
-      century, Rome felt militarily secure enough to finally make a move.\
-      For years, the Romans were unable to take the heavily fortified city. Finally, dictator Marcus\
-      Verias Camillus set his men digging a mine that led directly into Veii's citadel. When the\
-      mine was complete, a small group of soldiers infiltrated the citadel and threw open the\
-      gates of the city to the rest of the army. The Romans slaughtered the shocked citizens\
-      and hauled off the city's riches. The city would later be resettled by Romans.<br>\
-      <br>\
-      The conflict with Veii was a milestone for Romans and a turning point for the Italian region as\
-      a whole. The Romans' prolonged siege required them to field an army year-round, a previously\
-      unprecedented policy. To placate the soldiers, who could not go back to their farms, soldier-pay\
-      was introduced for the first time. The destruction of Veii would also mark the end of Etruscan\
-      dominance over the northern Italian peninsula. The disunited Etruscan city-states would be\
-      squeezed by the expanding Romans to the south and invading Gallic tribes to the north."
+      "file"  : "descrs/war_with_veii.html"
     },
     {
       "name"  : "First Samnite War",
@@ -474,19 +327,7 @@ var eventsInfo = {
       "start" : "340 BCE",
       "end"   : "338 BCE",
       "color" : "#EE1111",
-      "descr" : "At the close of the First Samnite War, the Campanians and Latins wanted\
-      to keep fighting to stamp out Samnite aggression and extract more spoils. Some of\
-      the Latin tribes took Rome's unwillingness to continue as a sign of weakness and\
-      rebelled. Being neighbors and former allies, the Roman and Latin armies were similar\
-      in almost every way, from formation to tactics to equipment. However, the Roman\
-      forces simply proved to be stronger. Latin independence from Rome was crushed once\
-      and for all.<br>\
-      <br>\
-      The Romans' treatment of the defeated Latins is one of the first clear instances of\
-      typical Roman foreign policy toward conquered peoples. Each tribe received treatment\
-      based on its degree of hostility toward Rome. Tribes that never joined the rebellion\
-      were granted full Roman citizenship while the most rebellious tribes were driven off\
-      their land, which was recolonized."
+      "file"  :  "descrs/latin_war.html"
     },
     {
       "name"  : "Alexander the Great",
@@ -499,23 +340,7 @@ var eventsInfo = {
       "start" : "326 BCE",
       "end"   : "304 BCE",
       "color" : "#EE1111",
-      "descr" : "The first several years of the war went well for the Romans, but in 321 BCE, the\
-      Romans suffered one of the most humiliating defeats in their history. The Samnites\
-      had cleverly trapped the Romans in a narrow pass called Caudine Forks. Without raising\
-      a single sword, the Romans had to surrender. The Samnites let them go, but forced them\
-      to pass under the yolk, a fate worse than death in the honor-crazy classical world.\
-      Five years passed with no fighting, but the Romans recovered and for a decade fought\
-      a war on two fronts&mdash;the Samnites to the south and their Etruscan allies to the north.\
-      The Etruscans eventually abandoned the war effort, and the Samnites soon followed suit.\
-      <br><br>\
-      The Second Samnite War was transformative. Around this time, the Romans adopted a far more\
-      imperialistic attitude toward its neighbors, and the Second Samnite War was one of the first\
-      instances of Roman foreign conquest and subjegation. The Via Appia, constructed for\
-      supplying troops in Samnium, would facilitate trade with Magna Graecia, while forts\
-      built in Etruria projected Roman power further north. Most importantly, battling an\
-      unfamiliar enemy in rugged terrain forced the Romans to abandon the traditional Greek\
-      phalanx and invent the famous maniple legion. The war took Rome from being a mere\
-      regional power to a position poised to conquer all of Italy."
+      "file"  : "descrs/second_samnite_war.html"
     },
     {
       "name"  : "Third Samnite War",
@@ -620,38 +445,7 @@ var eventsInfo = {
       "end"   : "14",
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "Born Gaius Octavius, Augustus demonstrated remarkable ability in oratory, politics, and\
-      administration during his formative years under the eye of his uncle Julius Caesar. Upon Caesar's\
-      death, his will revealed that he was postumusly adopting the nineteen-year-old Gaius and leaving him\
-      with three-forths of his fortune. Now Gaius Julius Caesar Octavianus, he would soon out-compete Mark\
-      Antony and the anti-Caesarians\
-      for support from the Senate, legions, and citizens to become the most powerful man in Rome. In\
-      27 BC, the Senate granted him the title 'Augustus' making him the first of the people retroactively\
-      called the Roman emperors. His charisma, skill, generosity, and longevity cemented the transition from\
-      republic to empire.<br>\
-      <br>\
-      <b>Administrative</b> He built a permanent civil-service and administrative bureaucracy consisting\
-      of slaves and ex-slaves which provided professionalism of administration and continuity between\
-      leadership changes. He improved the productivity of the unwieldy Senate by creating a\
-      working-group of 30 men that actually made the legislation. He used his massive wealth to fund\
-      infrastructure projects such as roads, horse-relay stations, and aqueducts which improved\
-      communication and trade. He imposed a regular census to make the tax collection consistant and\
-      fair.<br>\
-      <br>\
-      <b>Diplomacy/Military</b> Augustus thought the empire would soon become over-extended if it grew\
-      much bigger. He envisioned an empire that extended to the easily-defensible Danube\
-      and Elbe rivers. He settled a favorable peace with the Parthians which saw the return of the Roman\
-      legionary standards.<br>\
-      <br>\
-      <b>Imperial Image & Authority</b> Augustus was the pioneer of the Princeps, or 'first citizen' model\
-      of emperor.\ Wary of the stigma surrounding absolute power, he advertized himself as the restorer of\
-      the republic. Ironically, the common Romans, tired of the old republican oligarchy, often insisted\
-      he seize more power.<br>\
-      <br>\
-      <b>Religion & Morality</b> He instituted 'morality laws' to try to restore traditional Roman virtue.\
-      He outlawed adultery, provided benefits for having children, and made it hard to be single. These\
-      laws had little effect though. He also ushered in a revival of Roman religious practices and\
-      festivities."
+      "file"  : "descrs/augustus.html"
     },
     {
       "name"  : "Tiberius",
@@ -800,31 +594,7 @@ var eventsInfo = {
       "start" : "235",
       "end"   : "284",
       "color" : "#EE1111",
-      "descr" : "During the mid-third century, the empire nearly fell apart due to a\
-      combination of political instability, external invasion, plague, and economic depression.\
-      The seeds of the late Roman Empire and the Middle Ages were sown during the crisis\
-      years: decreased defense along the northern frontiers, increased city defenses, the\
-      decline of the legions, the breakdown of internal trade networks, growing inequality,\
-      and the breakdown of the middle class.<br>\
-      <br>\
-      The Severans had set a precedent for emperors to give large donatives and\
-      frequent wage increases to the soldiers to prevent rebellion. The army came to\
-      feel so entitled to these benefits that pandering to the army became the only\
-      source of imperial legitimacy. Troops elevated their generals to emperor upon\
-      glorious victory fueling perpetual civil war. Emperors were deposed by rival\
-      generals or when they simply fell out of favor with the army.\
-      This breakdown of imperial legitimacy exacerbated external threats and crippled\
-      the Roman response. Germanic tribes took notice of the political mess and\
-      and conducted raids across the extensive Rhine and Danube frontiers. Meanwhile,\
-      the sitting emperor was forced to deal with these threats himself instead of\
-      creating potential usurpers by delegating military responsibility to competent\
-      generals. Additionally, the Cyprian plague caused widespread manpower shortages\
-      that affected army recruitment and economic productivity.<br>\
-      <br>\
-      The unreasonable monetary demands of the army were also straining the imperial\
-      tax system leading emperors to resort to tampering with the Roman currency.\
-      Frequent debasement and minting lead to massive inflation such that the western\
-      empire nearly reverted to a barter system."
+      "file"  : "descrs/crisis_of_the_third_century.html"
     },
     {
       "name"  : "Cyprian Plague",
@@ -858,37 +628,7 @@ var eventsInfo = {
       "end"   : "305",
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "The reforms of the charismatic Diocletian lifted the empire out of the crisis era.\
-      His vision was to restore the empire's glory by reshaping its every institution.<br>\
-      <b>Administrative/Military Reforms</b> Diocletian sought to restore political stability by\
-      distributing administrative and military duties amongst more officials, thereby allowing\
-      specilization and preventing power amalgamation.\
-      <ul>\
-      <li>Established the Tetrarchy and voluntarily abdicated the throne, setting a\
-          precedent of peaceful sharing and relinquishing of imperial power</li>\
-      <li>Doubled the size of the imperial bureaucracy</li>\
-      <li>Doubled the number of provinces, and grouped them into dioceses</li>\
-      <li>Separated civilian and military government positions, such as establishing\
-          the position of dux--the military commander in a province</li>\
-      <li>Emphasized smaller and more mobile vexillation over the legion as the\
-          primary military unit for patrolling the northern frontiers</li>\
-      </ul>\
-      <b>Economic Reforms</b> His economic reforms aimed to fund the army and bureaucracy\
-      despite coin-debasement and inflation. He abandoned monetary taxation in favor of\
-      direct payment of raw goods. His Edict on Prices attempted to curb inflation by\
-      tabulating for each marketable good a maximum prices. However, the edict was\
-      unenforceable and was abandoned after his abdication.<br>\
-      <br>\
-      <b>Imperial Image</b> Hy styled the emperorship as a divinely appointed position\
-      to remove the ever-shifting allegiance of the army as the source of imperial legitimacy.\
-      This shift in perception from \"first among equals\" to \"lord and master\" typically\
-      marks the boundary between the Principate and Dominate forms of government.<br>\
-      <br>\
-      <b>Religious Persecutions</b> In 303, he ordered the persecution of Christians and\
-      Manichaeans from fear that the pagan gods would turn their backs on Rome. However,\
-      by this time, Christianity was too established and had too much sympathy to justify\
-      the appalling measures taken to stamp it out.\
-      "
+      "file"  : "descrs/diocletian.html"
     },
     {
       "name"  : "Constantine",
@@ -896,37 +636,7 @@ var eventsInfo = {
       "end"   : "337",
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "\
-      <ul>\
-      <li>Gaul & Britain (306 - 312)</li>\
-      <li>Western Empire (312 - 324)</li>\
-      <li>Whole Empire (324 - 337)</li>\
-      </ul>\
-      Constantine is famous for being the emperor who converted Rome to Christianity; and that\
-      legacy is certainly well-deserved. His religious convictions influenced nearly every action\
-      he took before and after his rise to power, and his unyielding insistance on a single\
-      national religion profoundly changed world history. As sole emperor, he built churches,\
-      issued morality laws, gave preference to Christians for public positions, and even outlawed\
-      the millenium-old pagan practices of divination and sacrifice.<br>\
-      <br>\
-      Though eventually a fervant Christian, it is difficult to trace\
-      his precise religious opinions up to the time he became sole emperor.\
-      The rhetoric during his early reign was vaguely monotheistic, but didn't commit to any single\
-      belief system. It appears that Constantine was searching for the \"correct\" faith during his\
-      rise to power, and later retroactively attributed his successes to the Christian God.\
-      His vague religious posture may have been a conscious choice to appeal to a wide range of\
-      potential supporters. An idealist,\
-      Constantine may have sought to leverage the organization of the early Church heirarchy, contrasted\
-      with independent local pagan practice, as a tool of unification.<br>\
-      <br>\
-      Constantine's monetary policy ultimately separated Romans economically rather than unifying them.\
-      While Diocletian had basically abandoned currency, Constantine introduced the gold solidus which\
-      would form the backbone of the eastern and western economies for hundreds of years. However, he\
-      neglected to stabilize silver and bronze currency which worsened inequality between rich and poor.\
-      He also introduced a commercial tax which forced many members of the lower classes to become\
-      indentured servants to wealthy landowners. Meanwhile, wealthy landowners, with their new workers,\
-      made their estates more self-sufficient to reduce the amount they owed, becoming the\
-      precursors of Medieval fiefdoms."
+      "file"  : "descrs/constantine.html"
     },
     {
       "name"  : "Constantius II",
@@ -941,31 +651,7 @@ var eventsInfo = {
       "end"   : "363",
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "Julian was born in Constantinople to Christian parents. After the death of Constantine,\
-      he retreated to intellectual study of Christian and classic Greek literature and\
-      philosophy. He was particularly drawn to the mysticism of Neoplatonism and developed\
-      beliefs in theurgy, divination, and the importance of animal sacrifice. In 351, Julian\
-      privately rejected his Christian upbringing. In 355, Julian was appointed by Constantius to be\
-      Caesar of the west. Although more naturally inclined to private study, the ambitious Julian was\
-      determined to master the military demands of his new position. He won crucial victories against\
-      invading German tribes and respect from his soldiers.<br>\
-      <br>\
-      When Constantius died in 361, Julian became sole emperor and wasted no time trying to undo all\
-      the work of Diocletian and Constantine. He abandoned the quasi-divine emperor charade,\
-      shrank the imperial court and bureaucracy, and redistributed governing power to city\
-      and province leaders. However, these reforms mostly caused confusion and didn't last\
-      beyond Julian's short reign. More famously, Julian attempted to orchestrate an empire-wide\
-      pagan revival by limiting Christians' access to imperial leadership positions. One of his\
-      most savvy political moves was his Tolerance Edict which declared all religions\
-      equal in the eyes of the state. He reasoned that without imperial sponsorship of \"mainstream\"\
-      Christianity, the incohesive religion would be torn apart by its own internal divisions.<br>\
-      <br>\
-      World history may have been radically different had Julian lived longer. However, his reforms\
-      came to a screetching halt when Julian was shot with an arrow in battle during a campaign\
-      against the Persians. No doubt, the visionary Julian aspired to be one of the Antonines with\
-      their long reigns over a stable and vibrant Roman era. But the crisis years and subsequent\
-      reforms had left the empire a vastly different place, and two years was simply not enough\
-      time."
+      "file"  : "descrs/julian_the_apostate.html"
     },
     {
       "name"  : "Valentinian I",
@@ -995,19 +681,7 @@ var eventsInfo = {
       "start" : "376",
       "end"   : "382",
       "color" : "#EE1111",
-      "descr" : "In 376, a hoard of Goths crossed the Danube seeking refuge from the Huns.\
-      After enduring harassment from local Roman leaders, they revolted and began rampaging\
-      around the Balkans. Emperor Valens and the eastern army eventually confronted them in 378.\
-      The ensuing Battle of Adrianople resulted in overwhelming victory for the Goths, whose\
-      unaccounted-for cavalry surrounded and slaughtered Valens and two-thirds of the veteran\
-      eastern army. What followed was a war of attrition as Gothic forces proved unable to\
-      capture the heavily fortified Roman cities and the crippled Roman army was no match for\
-      the Goths in open combat. In 382, breaking from centuries-old Roman foreign policy, the\
-      Goths were allowed to remain on Roman territory as a unified nation with fragile loyalty\
-      to Rome.<br><br>\
-      The Gothic War marks when the Roman legions, long suffering from manpower shortages, began\
-      to have serious problems defending the empire from hostile barbarians and internal\
-      political usurpers."
+      "file"  : "descrs/gothic_war.html"
     },
     {
       "name"  : "Theodosius",

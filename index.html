@@ -35,15 +35,29 @@
         position: absolute;
         left: 5px;
         top: 5px;
-        width: 500px;
+        width: auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        font: 14px Laila;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      #descr-box-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: white;
+        border-color: black;
+        border-radius: 5px;
+      }
+      #descr-box-body {
         max-width: 70vw;
         max-height: 70vh;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-        font: 14px Laila;
-        padding: 10px;
+        min-width: 300px;
+        padding-right: 20px;
+        margin-top: 10px;
+        overflow-x: scroll;
         overflow-y: scroll;
-        overflow-x: hidden;
         text-align: justify;
         text-justify: inter-word;
       }
@@ -76,7 +90,11 @@
         <svg id="svg"></svg>
       </div>
     </div>
-    <div id="descr-box"></div>
+    <div id="descr-box" hidden=true>
+      <div id="descr-box-title" style="text-align: left;"></div>
+      <button id="descr-box-close" onclick="descrBox.hidden = true;">x</button>
+      <div id="descr-box-body"></div>
+    </div>
     <div id="settings-box">
       <label>zoom</label><input id="zoom-input" type="number" value="100" onchange="setZoom();"><br><br>
       <label>stretch</label><input id="stretch-input" type="number" value="100" onchange="setStretch();"><br><br>

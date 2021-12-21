@@ -4,6 +4,8 @@ const svgns = "http://www.w3.org/2000/svg";
 
 var svg;
 var descrBox;
+var descrBoxTitle;
+var descrBoxBody;
 var intervals2pixels;
 
 var timespan = eventsInfo.end - eventsInfo.start;
@@ -16,6 +18,8 @@ var visibleGroups = ["rulers", undefined];
 function init() {
   svg = document.getElementById('svg');
   descrBox = document.getElementById('descr-box');
+  descrBoxTitle = document.getElementById('descr-box-title');
+  descrBoxBody = document.getElementById('descr-box-body');
 
   // Parse dates (this really shouldn't happen here)
   for (var evnt of eventsInfo.events) {
@@ -221,9 +225,9 @@ function drawMaps(maps, yPx) {
     let xPx = (map.when - eventsInfo.start) / timespan * renderInfo.widthPx;
     let icon = document.createElementNS(svgns, 'image');
     icon.onclick = function() {
-      descrBox.style.width = 'inherit';
-      //descrBox.style.backgroundColor = 'white';
-      descrBox.innerHTML = `${year2string(map.when)}: ${map.title}<br><img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
+      descrBoxBody.style.width = "auto";
+      descrBoxBody.innerHTML = `<img src="${map.image}" style="max-width: 1500px; max-height: 900px"/>`;
+      descrBoxTitle.innerHTML = `${year2string(map.when)}: ${map.title}`;
       descrBox.hidden = false;
     };
     icon.setAttribute("class", "changeOnHover")
@@ -278,11 +282,34 @@ function getDisplayEventInfoFunction(eventName) {
   var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; })
           || eventsInfo.events.find((e) => { return e.name == eventName; });
   var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
-  var boxPxWidth = evnt.descr ? Math.max(Math.round(Math.sqrt(evnt.descr.length))*15, 300) : 300;
+  var boxPxWidth;
+  var evntDescr;
+  if (evnt.file) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        evntDescr = this.responseText;
+        boxPxWidth = Math.max(Math.round(Math.sqrt(evntDescr.length))*18, 300);
+      } else if (this.readyState == 4) {
+        evntDescr = "description unavailable";
+        boxPxWidth = 300;
+      }
+    };
+    xhttp.open("GET", evnt.file);
+    xhttp.send();
+  } else if (evnt.descr) {
+    evntDescr = evnt.descr;
+    boxPxWidth = Math.max(Math.round(Math.sqrt(evntDescr.length))*18, 300);
+  } else {
+    evntDescr = "description unavailable";
+    boxPxWidth = 300;
+  }
 
-  return function(){
-    descrBox.innerHTML = `<u>${evnt.name}</u> (${evntWhen})<br>${evnt.descr}`;
-    descrBox.style.width = boxPxWidth + "px";
+  return function() {
+    descrBoxTitle.innerHTML = `<u>${evnt.name}</u> (${evntWhen})`;
+    descrBoxBody.innerHTML = evntDescr;
+    descrBoxBody.style.width = boxPxWidth + "px";
+    descrBox.hidden = false;
   };
 }
 
