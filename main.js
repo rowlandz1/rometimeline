@@ -32,6 +32,9 @@ function init() {
   for (var map of eventsInfo.maps) {
     map.when = parseDate(map.when).year;
   }
+  for (var widget of eventsInfo.widgets) {
+    widget.when = parseDate(widget.when).year;
+  }
 
   renderInfo.widthPxOrig = renderInfo.widthPx;
   redraw();
@@ -48,6 +51,7 @@ function redraw() {
   drawIntervalEvents(toDraw, renderInfo.heightPx/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
   drawEvents(eventsInfo.events, renderInfo.heightPx / 2 - 8, 70);
   drawMaps(eventsInfo.maps, renderInfo.heightPx / 2 - 15);
+  drawWidgets(eventsInfo.widgets);
   drawTimeMarkers(eventsInfo, renderInfo.heightPx / 2);
 }
 
@@ -230,16 +234,29 @@ function drawMaps(maps, yPx) {
       descrBoxTitle.innerHTML = `${year2string(map.when)}: ${map.title}`;
       descrBox.hidden = false;
     };
-    icon.setAttribute("class", "changeOnHover")
+    icon.setAttribute("class", "changeOnHover");
     icon.setAttribute("href", "map.svg");
-    icon.setAttribute("x", (xPx-25));
-    icon.setAttribute("y", (yPx-55));
+    icon.setAttribute("x", xPx-25);
+    icon.setAttribute("y", yPx-55);
     icon.setAttribute("width", 50);
     icon.setAttribute("height", 50);
     svg.appendChild(icon);
   }
 }
 
+function drawWidgets(widgets) {
+  for (let widget of widgets) {
+    let xPx = (widget.when - eventsInfo.start) / timespan * renderInfo.widthPx;
+    let icon = document.createElementNS(svgns, 'image');
+    icon.onclick = getDisplayEventInfoFunction(widget.name);
+    icon.setAttribute("class", "changeOnHover");
+    icon.setAttribute("href", widget.icon);
+    icon.setAttribute("x", xPx - widget.width/2);
+    icon.setAttribute("y", renderInfo.heightPx/2 + widget.ypos);
+    icon.setAttribute("width", widget.width);
+    svg.appendChild(icon);
+  }
+}
 
 // Makes a label with black text and a semi-transparent white background.
 // Providing a textWidth can prevent recalculating it.
@@ -280,7 +297,8 @@ function mkButtonLabel(text, x, y, textWidth=0) {
 function getDisplayEventInfoFunction(eventName) {
   // find the event specified by text
   var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; })
-          || eventsInfo.events.find((e) => { return e.name == eventName; });
+          || eventsInfo.events.find((e) => { return e.name == eventName; })
+          || eventsInfo.widgets.find((e) => { return e.name == eventName; });
   var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
   var boxPxWidth;
   var evntDescr;

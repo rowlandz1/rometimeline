@@ -333,7 +333,8 @@ var eventsInfo = {
       "name"  : "Alexander the Great",
       "start" : "336 BCE",
       "end"   : "323 BCE",
-      "color" : "blue"
+      "color" : "blue",
+      "file"  : "descrs/alexander_the_great.html"
     },
     {
       "name"  : "Second Samnite War",
@@ -346,13 +347,21 @@ var eventsInfo = {
       "name"  : "Third Samnite War",
       "start" : "298 BCE",
       "end"   : "290 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "descr" : "Animosity between Rome and Samnium was bound to flare up again following\
+      the Second Samnite War.\
+      In 298, the Samnites joined Etruscans, Umbrians, and Gallic mercenaries in a final\
+      attempt to beat back the growing Roman menace. The fighting culminated in 295 at the\
+      battle of Sentinum where the Romans faced a combined four-way coalition army. Both\
+      sides fielded armies upwards of forty-thousand men. Victory was due to the discipline\
+      and endurance of the Roman legions."
     },
     {
       "name"  : "Pyrrhic War",
       "start" : "280 BCE",
       "end"   : "275 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "file"  : "descrs/pyrrhic_war.html"
     },
     {
       "name"  : "First Punic War",
@@ -555,18 +564,7 @@ var eventsInfo = {
       "end"   : "211",
       "color" : "#7851A9",
       "group" : "rulers",
-      "descr" : "Being the first major emperor after the Antonine dynasty, his legitimacy was critically\
-      low beginning his reign. In 193, he was hailed emperor by his troops in Pannonia and thrust into\
-      competition with his rival claimants. His place in power was given and maintained by the army\
-      alone. Aware of his fragile authority, Severus gave large donatives and increased the wage of his\
-      soldiers. He created new legions and reorganized the Praetorian Guard into a personal army of\
-      fifty-thousand men. Having little interest in the charade of republicanism, he ignored the Senate\
-      and Roman aristocracy. The increased military spending prompted Severus to debase the silver\
-      denarius from 81% to only 54% silver.<br>\
-      <br>\
-      Severus is usually remembered as an effective ruler who waged several successful military campaigns\
-      and fixed much of the financial damage caused by Commodus. However, the soldier wage increase and\
-      coinage debasement contributed to the military anarchy and economic collapse of the third century."
+      "file"  : "descrs/severus.html"
     },
     {
       "name"  : "Caracalla",
@@ -740,24 +738,54 @@ var eventsInfo = {
   ],
   "maps" : [
     {
+      "title" : "Rome and Carthage before the First Punic War",
+      "when"  : "264 BCE",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/a/ac/First_Punic_War_264_BC_v3.png"
+    },
+    {
       "title" : "The Mediterranean world before the Second Punic War",
       "when"  : "218 BCE",
-      "image" : "maps/RE218BC.png"
+      "image" : "https://i.pinimg.com/originals/b7/68/3a/b7683ad1d15e83f54c66392dda2513ad.png"
     },
     {
       "title" : "Roman Empire at its greatest extent",
       "when"  : "117 CE",
-      "image" : "maps/RE117.png"
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Roman_Empire_Trajan_117AD.png/1920px-Roman_Empire_Trajan_117AD.png"
+    },
+    {
+      "title" : "The divided empire during the crisis years.",
+      "when"  : "271 CE",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Map_of_Ancient_Rome_271_AD.svg/1920px-Map_of_Ancient_Rome_271_AD.svg.png"
     },
     {
       "title" : "Division of the empire under the Tetrarchy",
       "when"  : "293 CE",
-      "image" : "maps/RE293.jpg"
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/0/07/Tetrarchy_map3.jpg"
     },
     {
-      "title" : "Rome at the fall of the western empire",
+      "title" : "Europe and the Mediterranean world at the fall of the western empire",
       "when"  : "476 CE",
-      "image" : "maps/RE476.png"
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Europe_and_the_Near_East_at_476_AD.png/1280px-Europe_and_the_Near_East_at_476_AD.png"
+    },
+    {
+      "title" : "Europe before the reign of Justinian",
+      "when"  : "526 CE",
+      "image" : "https://3.bp.blogspot.com/-95rLQ9EWCx0/VmaGQvG4agI/AAAAAAAAsao/oYEiactujOs/s1600/EU526.jpg"
+    },
+    {
+      "title" : "Greatest Extent of the Byzantine Empire",
+      "when"  : "555 CE",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/0/01/Europe-In-555AD.png"
+    }
+  ],
+  "widgets" : [
+    {
+      "name"  : "Roman Legions",
+      "icon"  : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vexilloid_of_the_Roman_Empire.svg/800px-Vexilloid_of_the_Roman_Empire.svg.png",
+      "width" : 75,
+      "when"  : "310 BCE",
+      "ypos"  : -150,
+      "file"  : "descrs/roman_legions.html"
     }
   ]
 };
