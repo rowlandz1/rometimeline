@@ -64,6 +64,17 @@ var eventsInfo = {
       to be a plebian."
     },
     {
+      "name" : "First Illyrian War",
+      "when" : "228 BCE",
+      "descr" : "The Romans launched a campaign against the Illyrian Ardiaei kingdom to put an end\
+      to Illyrian piracy."
+    },
+    {
+      "name" : "Battle of Telamon",
+      "when" : "225 BCE",
+      "descr" : "Decisive victory against invading Gauls"
+    },
+    {
       "name" : "Battle of Cannae",
       "when" : "216 BCE"
     },
@@ -250,50 +261,43 @@ var eventsInfo = {
       "name"  : "Romulus",
       "start" : "753 BCE",
       "end"   : "715 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Numa Pompilius",
       "start" : "715 BCE",
       "end"   : "673 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Tullus Hostilius",
       "start" : "673 BCE",
       "end"   : "642 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Ancus Martius",
       "start" : "642 BCE",
       "end"   : "616 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Tarquinius Priscus",
       "start" : "616 BCE",
       "end"   : "579 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Servius Tullius",
       "start" : "579 BCE",
       "end"   : "534 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Tarquinius Superbus",
       "start" : "534 BCE",
       "end"   : "509 BCE",
-      "color" : "gold",
-      "group" : "rulers"
+      "color" : "gold"
     },
     {
       "name"  : "Athenian Golden Age",
@@ -306,6 +310,7 @@ var eventsInfo = {
       "start" : "405 BCE",
       "end"   : "396 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "file"  : "descrs/war_with_veii.html"
     },
     {
@@ -313,6 +318,7 @@ var eventsInfo = {
       "start" : "343 BCE",
       "end"   : "341 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "descr" : "Samnites were semi-nomadic hill-tribe. They migrated out of the hills of\
       central Italy onto the lush plains surrounding Capua. The citizens sent envoys\
       to Rome begging for assistance fending off the foreign threat, but Rome refused\
@@ -327,6 +333,7 @@ var eventsInfo = {
       "start" : "340 BCE",
       "end"   : "338 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "file"  :  "descrs/latin_war.html"
     },
     {
@@ -341,6 +348,7 @@ var eventsInfo = {
       "start" : "326 BCE",
       "end"   : "304 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "file"  : "descrs/second_samnite_war.html"
     },
     {
@@ -348,6 +356,7 @@ var eventsInfo = {
       "start" : "298 BCE",
       "end"   : "290 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "descr" : "Animosity between Rome and Samnium was bound to flare up again following\
       the Second Samnite War.\
       In 298, the Samnites joined Etruscans, Umbrians, and Gallic mercenaries in a final\
@@ -361,43 +370,79 @@ var eventsInfo = {
       "start" : "280 BCE",
       "end"   : "275 BCE",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "file"  : "descrs/pyrrhic_war.html"
     },
     {
       "name"  : "First Punic War",
       "start" : "264 BCE",
       "end"   : "241 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+      "file"  : "descrs/first_punic_war.html"
     },
     {
       "name"  : "Second Punic War",
       "start" : "218 BCE",
       "end"   : "201 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"]
+    },
+    {
+      "name"  : "First Macedonian War",
+      "start" : "215 BCE",
+      "end"   : "205 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Second Macedonian War",
       "start" : "200 BCE",
       "end"   : "197 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+    },
+    {
+      "name"  : "Syrian War",
+      "start" : "192 BCE",
+      "end"   : "188 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Third Macedonian War",
       "start" : "171 BCE",
       "end"   : "168 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+    },
+    {
+      "name"  : "War in Iberia",
+      "start" : "155 BCE",
+      "end"   : "133 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Third Punic War",
       "start" : "149 BCE",
       "end"   : "146 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
     },
     {
       "name"  : "First Servile War",
       "start" : "135 BCE",
       "end"   : "132 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+    },
+    {
+      "name"  : "War with Jugurtha",
+      "start" : "118 BCE",
+      "end"   : "106 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Marius",
@@ -410,19 +455,37 @@ var eventsInfo = {
       "name"  : "Social War",
       "start" : "91 BCE",
       "end"   : "87 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
     },
     {
       "name"  : "First Mithridatic War",
       "start" : "89 BCE",
       "end"   : "85 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+    },
+    {
+      "name"  : "Second Mithridatic War",
+      "start" : "83 BCE",
+      "end"   : "81 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Third Servile War",
       "start" : "73 BCE",
       "end"   : "71 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
+    },
+
+    {
+      "name"  : "Third Mithridatic War",
+      "start" : "73 BCE",
+      "end"   : "63 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "First Triumvirate",
@@ -435,7 +498,8 @@ var eventsInfo = {
       "name"  : "Gallic Wars",
       "start" : "58 BCE",
       "end"   : "50 BCE",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"],
     },
     {
       "name"  : "Second Triumvirate",
@@ -453,7 +517,7 @@ var eventsInfo = {
       "start" : "27 BCE",
       "end"   : "14",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "file"  : "descrs/augustus.html"
     },
     {
@@ -461,96 +525,98 @@ var eventsInfo = {
       "start" : "14",
       "end"   : "37",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Caligula",
       "start" : "37",
       "end"   : "41",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Claudius",
       "start" : "41",
       "end"   : "54",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Nero",
       "start" : "54",
       "end"   : "68",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Great Jewish Revolt",
       "start" : "66",
       "end"   : "73",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Vespasian",
       "start" : "69",
       "end"   : "79",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Domitian",
       "start" : "81",
       "end"   : "96",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Nerva",
       "start" : "96",
       "end"   : "98",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Trajan",
       "start" : "98",
       "end"   : "117",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Hadrian",
       "start" : "117",
       "end"   : "138",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Antoninus Pius",
       "start" : "138",
       "end"   : "161",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Marcus Aurelius",
       "start" : "161",
       "end"   : "180",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Marcomannic Wars",
       "start" : "166",
       "end"   : "180",
-      "color" : "#EE1111"
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Commodus",
       "start" : "176",
       "end"   : "192",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Antonine Plague",
@@ -563,7 +629,7 @@ var eventsInfo = {
       "start" : "193",
       "end"   : "211",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "file"  : "descrs/severus.html"
     },
     {
@@ -571,21 +637,21 @@ var eventsInfo = {
       "start" : "198",
       "end"   : "217",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Elagabalus",
       "start" : "218",
       "end"   : "222",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Severus Alexander",
       "start" : "222",
       "end"   : "235",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Crisis of the Third Century",
@@ -605,14 +671,14 @@ var eventsInfo = {
       "start" : "253",
       "end"   : "260",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Aurelian",
       "start" : "270",
       "end"   : "275",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "descr" : "<ul>\
       <li>Defeated Zenobia and Postumus, reintegrating the Palmyrene and Gallic Empires under Roman rule</li>\
       <li>Abandoned Roman control of the vulnerable province of Dacia</li>\
@@ -625,7 +691,7 @@ var eventsInfo = {
       "start" : "284",
       "end"   : "305",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "file"  : "descrs/diocletian.html"
     },
     {
@@ -633,7 +699,7 @@ var eventsInfo = {
       "start" : "306",
       "end"   : "337",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "file"  : "descrs/constantine.html"
     },
     {
@@ -641,14 +707,14 @@ var eventsInfo = {
       "start" : "337",
       "end"   : "361",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Julian the Apostate",
       "start" : "355",
       "end"   : "363",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "file"  : "descrs/julian_the_apostate.html"
     },
     {
@@ -656,7 +722,7 @@ var eventsInfo = {
       "start" : "364",
       "end"   : "375",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
       "descr" : "At a meeting with the Quadi tribe, Valentinian got so angry that he suffered\
       and died from a stroke induced from his yelling."
     },
@@ -665,20 +731,21 @@ var eventsInfo = {
       "start" : "364",
       "end"   : "378",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Valentinian II",
       "start" : "375",
       "end"   : "392",
       "color" : "#7851A9",
-      "group" : "rulers",
+      "tags"  : ["emperor"],
     },
     {
       "name"  : "Gothic War",
       "start" : "376",
       "end"   : "382",
       "color" : "#EE1111",
+      "tags"  : ["war"],
       "file"  : "descrs/gothic_war.html"
     },
     {
@@ -686,7 +753,7 @@ var eventsInfo = {
       "start" : "379",
       "end"   : "395",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Stilicho",
@@ -699,14 +766,14 @@ var eventsInfo = {
       "start" : "393",
       "end"   : "423",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Valentinian III",
       "start" : "425",
       "end"   : "455",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     },
     {
       "name"  : "Aëtius",
@@ -733,7 +800,7 @@ var eventsInfo = {
       "start" : "1 April 527 CE",
       "end"   : "14 November 565 CE",
       "color" : "#7851A9",
-      "group" : "rulers"
+      "tags"  : ["emperor"]
     }
   ],
   "maps" : [
@@ -755,7 +822,7 @@ var eventsInfo = {
     {
       "title" : "The divided empire during the crisis years.",
       "when"  : "271 CE",
-      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Map_of_Ancient_Rome_271_AD.svg/1920px-Map_of_Ancient_Rome_271_AD.svg.png"
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Map_of_Ancient_Rome_271_AD.svg"
     },
     {
       "title" : "Division of the empire under the Tetrarchy",
@@ -781,11 +848,27 @@ var eventsInfo = {
   "widgets" : [
     {
       "name"  : "Roman Legions",
-      "icon"  : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vexilloid_of_the_Roman_Empire.svg/800px-Vexilloid_of_the_Roman_Empire.svg.png",
+      "icon"  : "https://upload.wikimedia.org/wikipedia/commons/8/83/Vexilloid_of_the_Roman_Empire.svg",
       "width" : 75,
       "when"  : "310 BCE",
       "ypos"  : -150,
       "file"  : "descrs/roman_legions.html"
+    },
+    {
+      "name"  : "Carthage",
+      "icon"  : "https://upload.wikimedia.org/wikipedia/commons/0/0f/Carthage_standard.svg",
+      "width" : 40,
+      "when"  : "250 BCE",
+      "ypos"  : -150,
+      "file"  : "descrs/carthage.html"
+    },
+    {
+      "name"  : "Classical Latin",
+      "icon"  : "https://upload.wikimedia.org/wikipedia/commons/b/b7/Rome_Colosseum_inscription_2.jpg",
+      "width" : 55,
+      "when"  : "110 BCE",
+      "ypos"  : 100,
+      "file"  : "descrs/classical_latin.html"
     }
   ]
 };

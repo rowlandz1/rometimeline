@@ -14,6 +14,7 @@ var timespan = eventsInfo.end - eventsInfo.start;
 var zoom = 1.0;
 var stretch = 1.0;
 var visibleGroups = ["rulers", undefined];
+var visibleTags = ["emperor", "war"];
 
 function init() {
   svg = document.getElementById('svg');
@@ -47,7 +48,13 @@ function redraw() {
   intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
   drawMainLine(eventsInfo, renderInfo.heightPx / 2);
-  var toDraw = eventsInfo.intervalEvents.filter((e) => {return visibleGroups.includes(e.group);});
+  var toDraw = eventsInfo.intervalEvents.filter((e) => {
+    if (e.tags == undefined) return true;
+    for (tag of e.tags) {
+      if (visibleTags.includes(tag)) return true;
+    }
+    return false;
+  });
   drawIntervalEvents(toDraw, renderInfo.heightPx/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
   drawEvents(eventsInfo.events, renderInfo.heightPx / 2 - 8, 70);
   drawMaps(eventsInfo.maps, renderInfo.heightPx / 2 - 15);
@@ -152,15 +159,15 @@ function drawIntervalEvent(evnt, yPx, labelstyle) {
 
   // draw text
   if (labelstyle == "adj-right") {
-    g.appendChild(mkLabel(evnt.name, evntPxStart + evntPxLength + 4, yPx + 16));
+    g.appendChild(mkLabel(evnt.name, evntPxStart + evntPxLength + 5, yPx + 16));
   } else if (labelstyle == "align-left") {
-    g.appendChild(mkLabel(evnt.name, evntPxStart + 4, yPx + 16));
+    g.appendChild(mkLabel(evnt.name, evntPxStart + 5, yPx + 16));
   } else {
     console.log("interval event must be adj-right or align-left");
   }
 
   // click action
-  g.onclick = getDisplayEventInfoFunction(evnt.name);
+  g.onclick = getDisplayEventInfoFunction(evnt);
 
   svg.appendChild(g);
 }
@@ -191,7 +198,7 @@ function drawEvents(evnts, pointYPx, stalkPx) {
 
   // draw labels
   for (var evnt of evnts)
-    drawEventText(evnt.name, evnt.textXPx, evnt.textYPx, evnt.textWidth);
+    drawEventText(evnt, evnt.textXPx, evnt.textYPx, evnt.textWidth);
 }
 
 function drawEventStalk(pointXPx, pointYPx, textYPx) {
@@ -211,8 +218,8 @@ function drawEventStalk(pointXPx, pointYPx, textYPx) {
   svg.appendChild(circle);
 }
 
-function drawEventText(text, textXPx, textYPx, textWidth) {
-  var buttonLabel = mkButtonLabel(text, textXPx, textYPx, textWidth)
+function drawEventText(evnt, textXPx, textYPx, textWidth) {
+  var buttonLabel = mkButtonLabel(evnt, textXPx, textYPx, textWidth);
 
   var line = document.createElementNS(svgns, "line");
   line.setAttribute("x1", textXPx);
@@ -248,7 +255,7 @@ function drawWidgets(widgets) {
   for (let widget of widgets) {
     let xPx = (widget.when - eventsInfo.start) / timespan * renderInfo.widthPx;
     let icon = document.createElementNS(svgns, 'image');
-    icon.onclick = getDisplayEventInfoFunction(widget.name);
+    icon.onclick = getDisplayEventInfoFunction(widget, false);
     icon.setAttribute("class", "changeOnHover");
     icon.setAttribute("href", widget.icon);
     icon.setAttribute("x", xPx - widget.width/2);
@@ -260,6 +267,8 @@ function drawWidgets(widgets) {
 
 // Makes a label with black text and a semi-transparent white background.
 // Providing a textWidth can prevent recalculating it.
+// The x and y coordinates are the bottom-left corner of the text. The actual label extends
+// from x-4 to x+textWidth+4 pixels horizontally and from y-14 to y+4 vertically.
 function mkLabel(text, x, y, textWidth=0) {
   if (textWidth == 0) textWidth = getTextWidth(text, "14px Laila");
 
@@ -285,23 +294,27 @@ function mkLabel(text, x, y, textWidth=0) {
   return g;
 }
 
-// same as mkLabel with an onclick set by getDisplayEventInfoFunction(text)
-function mkButtonLabel(text, x, y, textWidth=0) {
-  var g = mkLabel(text, x, y, textWidth);
-  g.onclick = getDisplayEventInfoFunction(text);
+// same as mkLabel with an onclick set by getDisplayEventInfoFunction(evnt)
+function mkButtonLabel(evnt, x, y, textWidth=0) {
+  var g = mkLabel(evnt.name, x, y, textWidth);
+  g.onclick = getDisplayEventInfoFunction(evnt);
   g.setAttribute("class", "changeOnHover");
   return g;
 
 }
 
-function getDisplayEventInfoFunction(eventName) {
-  // find the event specified by text
-  var evnt = eventsInfo.intervalEvents.find((e) => { return e.name == eventName; })
-          || eventsInfo.events.find((e) => { return e.name == eventName; })
-          || eventsInfo.widgets.find((e) => { return e.name == eventName; });
-  var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
+// Attribute requirements for `evnt` are the following:
+//    name
+//    when | (start & end)    if displayWhen
+//    (file | descr)?
+function getDisplayEventInfoFunction(evnt, displayWhen=true) {
+  var evntTitle = `<u>${evnt.name}</u>`;
   var boxPxWidth;
   var evntDescr;
+  if (displayWhen) {
+    var evntWhen = evnt.when ? year2string(evnt.when) : `${year2string(evnt.start)} - ${year2string(evnt.end)}`;
+    evntTitle += ` (${evntWhen})`;
+  }
   if (evnt.file) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -324,7 +337,7 @@ function getDisplayEventInfoFunction(eventName) {
   }
 
   return function() {
-    descrBoxTitle.innerHTML = `<u>${evnt.name}</u> (${evntWhen})`;
+    descrBoxTitle.innerHTML = evntTitle;
     descrBoxBody.innerHTML = evntDescr;
     descrBoxBody.style.width = boxPxWidth + "px";
     descrBox.hidden = false;
@@ -357,9 +370,9 @@ function userSettingChanged() {
   stretch = document.getElementById("stretch-input").value / 100;
   renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
 
-  visibleGroups = [];
-  if (document.getElementById("rulers-checkbox").checked) visibleGroups.push("rulers");
-  if (document.getElementById("others-checkbox").checked) visibleGroups.push(undefined);
+  visibleTags = [];
+  if (document.getElementById("emperor-checkbox").checked) visibleTags.push("emperor");
+  if (document.getElementById("war-checkbox").checked) visibleTags.push("war");
 
   redraw();
 }
