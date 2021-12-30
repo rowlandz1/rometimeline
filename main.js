@@ -2,6 +2,8 @@
 // SVG namespace
 const svgns = "http://www.w3.org/2000/svg";
 
+var timelineDIV;
+var epochsDIV;
 var svg;
 var descrBox;
 var descrBoxTitle;
@@ -11,12 +13,14 @@ var intervals2pixels;
 var timespan = eventsInfo.end - eventsInfo.start;
 
 // set by user interaction
-var zoom = 1.0;
 var stretch = 1.0;
 var visibleGroups = ["rulers", undefined];
 var visibleTags = ["emperor", "war"];
+var visibleEras = "3way";
 
 function init() {
+  timelineDIV = document.getElementById('timeline-div');
+  epochsDIV = document.getElementById('epochs-div');
   svg = document.getElementById('svg');
   descrBox = document.getElementById('descr-box');
   descrBoxTitle = document.getElementById('descr-box-title');
@@ -36,30 +40,57 @@ function init() {
   for (var widget of eventsInfo.widgets) {
     widget.when = parseDate(widget.when).year;
   }
+  for (var epoch of eventsInfo.epochs) {
+    epoch.start = parseDate(epoch.start).year;
+    epoch.end = parseDate(epoch.end).year;
+  }
 
   renderInfo.widthPxOrig = renderInfo.widthPx;
   redraw();
 }
 
 function redraw() {
+  epochsDIV.innerHTML = "";
   svg.innerHTML = "";
   svg.setAttribute("viewBox", `0 0 ${renderInfo.widthPx} ${renderInfo.heightPx}`);
-  svg.setAttribute("width", zoom * renderInfo.widthPx);
+  timelineDIV.style.width = renderInfo.widthPx + "px";
+  timelineDIV.style.minHeight = renderInfo.heightPx + "px";
   intervals2pixels = renderInfo.widthPx / (eventsInfo.end - eventsInfo.start);
 
+  drawEpochs(filterByTags(eventsInfo.epochs, [visibleEras]));
   drawMainLine(eventsInfo, renderInfo.heightPx / 2);
-  var toDraw = eventsInfo.intervalEvents.filter((e) => {
-    if (e.tags == undefined) return true;
-    for (tag of e.tags) {
-      if (visibleTags.includes(tag)) return true;
-    }
-    return false;
-  });
-  drawIntervalEvents(toDraw, renderInfo.heightPx/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
-  drawEvents(eventsInfo.events, renderInfo.heightPx / 2 - 8, 70);
+  drawIntervalEvents(filterByTags(eventsInfo.intervalEvents, visibleTags, true),
+                     renderInfo.heightPx/2 + renderInfo.eventHeightPx/2 + 5, "align-left");
+  drawEvents(filterByTags(eventsInfo.events, visibleTags, true), renderInfo.heightPx/2 - 8, 70);
   drawMaps(eventsInfo.maps, renderInfo.heightPx / 2 - 15);
   drawWidgets(eventsInfo.widgets);
   drawTimeMarkers(eventsInfo, renderInfo.heightPx / 2);
+}
+
+function drawEpochs(epochs) {
+  for (epoch of epochs) {
+    var startPx = (epoch.start - eventsInfo.start) / timespan * renderInfo.widthPx - 2;
+    var widthPx = (epoch.end - epoch.start) / timespan * renderInfo.widthPx + 4;
+
+    var div = document.createElement("div");
+    div.style.position = "absolute";
+    div.style.height = "100%";
+    div.style.backgroundImage = `radial-gradient(transparent 50%, ${epoch.color} 100%)`;
+    div.style.left = startPx + "px";
+    div.style.width = widthPx + "px";
+    div.style.display = "flex";
+
+    var txt = document.createElement("label");
+    txt.innerHTML = epoch.name;
+    txt.style.font = "64px Gideon Roman";
+    txt.style.cursor = "default";
+    txt.style.color = "rgba(0, 0, 0, 0.2)";
+    txt.style.margin = "auto";
+    txt.style.marginBottom = "20px";
+    div.appendChild(txt);
+
+    epochsDIV.appendChild(div);
+  }
 }
 
 function drawMainLine(line, yPx) {
@@ -355,17 +386,6 @@ function getTextWidth(text, font) {
   return metrics.width;
 }
 
-function setZoom() {
-  zoom = document.getElementById("zoom-input").value / 100;
-  svg.setAttribute("width", zoom * renderInfo.widthPx);
-}
-
-function setStretch() {
-  stretch = document.getElementById("stretch-input").value / 100;
-  renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
-  redraw();
-}
-
 function userSettingChanged() {
   stretch = document.getElementById("stretch-input").value / 100;
   renderInfo.widthPx = renderInfo.widthPxOrig * stretch;
@@ -373,6 +393,8 @@ function userSettingChanged() {
   visibleTags = [];
   if (document.getElementById("emperor-checkbox").checked) visibleTags.push("emperor");
   if (document.getElementById("war-checkbox").checked) visibleTags.push("war");
+
+  visibleEras = document.querySelector("input[name=eras]:checked").value;
 
   redraw();
 }

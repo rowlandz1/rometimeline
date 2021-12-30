@@ -35,8 +35,7 @@ var eventsInfo = {
     {
       "name" : "Secession of the Plebs",
       "when" : "494 BCE",
-      "descr" : "The Plebians were becoming increasingly concerned with debt bondage. In 494 BCE, they basically\
-      went on strike, forcing the hand of the Patricians. The office of tribune was created as a result."
+      "file" : "descrs/secession_of_the_plebs.html"
     },
     {
       "name" : "Dictatorship of Cincinnatus",
@@ -54,18 +53,18 @@ var eventsInfo = {
       "file" : "descrs/rome_sacked_by_gauls.html"
     },
     {
+      "name" : "Lex Licinia",
+      "when" : "367 BCE",
+      "file" : "descrs/lex_licinia.html"
+    },
+    {
       "name" : "Lex Genucia",
-      "when" : "342 BCE",
-      "descr" : "Since the founding of the Republic, the plebians struggled with the patricians\
-      for more political power. According to tradition, plebians were forbidden from holding the\
-      consulship, the highest political office, although modern historians believe the ban is\
-      ficticious and there were in fact plebian consuls. Regardless, the political struggle between\
-      the two groups lead to the passage of the Lex Genucia which required one of the yearly consuls\
-      to be a plebian."
+      "when" : "342 BCE"
     },
     {
       "name" : "First Illyrian War",
       "when" : "228 BCE",
+      "tags" : ["war"],
       "descr" : "The Romans launched a campaign against the Illyrian Ardiaei kingdom to put an end\
       to Illyrian piracy."
     },
@@ -83,8 +82,9 @@ var eventsInfo = {
       "when" : "202 BCE"
     },
     {
-      "name" : "Sulla marches on Rome",
-      "when" : "88 BCE"
+      "name" : "Achaean War",
+      "when" : "146 BCE",
+      "tags" : ["war"]
     },
     {
       "name" : "Catiline Conspiracy",
@@ -140,6 +140,10 @@ var eventsInfo = {
     {
       "name" : "Year of Four Emperors",
       "when" : "69"
+    },
+    {
+      "name" : "Destruction of Pompeii",
+      "when" : "79 CE"
     },
     {
       "name" : "Colosseum Completed",
@@ -424,6 +428,13 @@ var eventsInfo = {
       "tags"  : ["war"]
     },
     {
+      "name"  : "Fourth Macedonian War",
+      "start" : "150 BCE",
+      "end"   : "148 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
+    },
+    {
       "name"  : "Third Punic War",
       "start" : "149 BCE",
       "end"   : "146 BCE",
@@ -464,6 +475,12 @@ var eventsInfo = {
       "end"   : "85 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+    },
+    {
+      "name"  : "Sulla",
+      "start" : "88 BCE",
+      "end"   : "79 BCE",
+      "color" : "blue",
     },
     {
       "name"  : "Second Mithridatic War",
@@ -802,6 +819,57 @@ var eventsInfo = {
       "color" : "#7851A9",
       "tags"  : ["emperor"]
     }
+  ],
+  "epochs" : [
+    {
+      "name"  : "KINGDOM",
+      "start" : "753 BCE",
+      "end"   : "509 BCE",
+      "color" : "rgba(255, 217, 0, 0.5)",
+      "tags"  : ["3way", "5way"]
+    },
+    {
+      "name"  : "REPUBLIC",
+      "start" : "509 BCE",
+      "end"   : "27 BCE",
+      "color" : "rgba(255, 50, 50, 0.5)",
+      "tags"  : ["3way"]
+    },
+    {
+      "name"  : "EARLY REPUBLIC",
+      "start" : "509 BCE",
+      "end"   : "280 BCE",
+      "color" : "rgba(255, 100, 0, 0.5)",
+      "tags"  : ["5way"]
+    },
+    {
+      "name"  : "LATE REPUBLIC",
+      "start" : "280 BCE",
+      "end"   : "27 BCE",
+      "color" : "rgba(255, 0, 100, 0.5)",
+      "tags"  : ["5way"]
+    },
+    {
+      "name"  : "EMPIRE",
+      "start" : "27 BCE",
+      "end"   : "476 CE",
+      "color" : "rgba(100, 0, 255, 0.5)",
+      "tags"  : ["3way"]
+    },
+    {
+      "name"  : "PRINCIPATE",
+      "start" : "27 BCE",
+      "end"   : "284 CE",
+      "color" : "rgba(0, 100, 255, 0.5)",
+      "tags"  : ["5way"]
+    },
+    {
+      "name"  : "DOMINATE",
+      "start" : "284 CE",
+      "end"   : "476 CE",
+      "color" : "rgba(50, 0, 255, 0.5)",
+      "tags"  : ["5way"]
+    },
   ],
   "maps" : [
     {

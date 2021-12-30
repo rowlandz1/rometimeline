@@ -10,6 +10,18 @@ function partition(lst, getGroup) {
   return ret;
 }
 
+// Filters `taggedItems` based on if they have a tag in `tags`.
+// `taggedItems` must be of the form [{"tags" : ["<tag1>"...]}...]
+// If `untagged` is true, then items without a "tags" attribute will
+// be included in the returned list.
+function filterByTags(taggedItems, tags, untagged=false) {
+  return taggedItems.filter((item) => {
+    if (item.tags == undefined) return untagged;
+    for (tag of item.tags) if (tags.includes(tag)) return true;
+    return false;
+  });
+}
+
 function year2string(date) {
   if (date < 0) return `${-date} BCE`;
   if (date > 0) return `${date} CE`;
