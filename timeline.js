@@ -74,17 +74,18 @@ var eventsInfo = {
       "descr" : "Decisive victory against invading Gauls"
     },
     {
-      "name" : "Battle of Cannae",
-      "when" : "216 BCE"
-    },
-    {
-      "name" : "Battle of Zama",
-      "when" : "202 BCE"
-    },
-    {
       "name" : "Achaean War",
       "when" : "146 BCE",
       "tags" : ["war"]
+    },
+    {
+      "name" : "Tiberius Gracchus",
+      "when" : "133 BCE",
+      "file" : "descrs/tiberius_gracchus.html"
+    },
+    {
+      "name" : "Gaius Gracchus",
+      "when" : "122 BCE"
     },
     {
       "name" : "Catiline Conspiracy",
@@ -92,8 +93,9 @@ var eventsInfo = {
       "file" : "descrs/catiline_conspiracy.html"
     },
     {
-      "name" : "Crossing of the Rubicon",
-      "when" : "49 BCE"
+      "name" : "Pompey's Triumph",
+      "when" : "61 BCE",
+      "file" : "descrs/pompeys_triumph.html"
     },
     {
       "name" : "Julius Caesar Killed",
@@ -112,10 +114,6 @@ var eventsInfo = {
     {
       "name" : "Battle of Actium",
       "when" : "31 BCE"
-    },
-    {
-      "name" : "Census of Quirinius",
-      "when" : "6"
     },
     {
       "name" : "Battle of the Teutoburg Forest",
@@ -390,7 +388,8 @@ var eventsInfo = {
       "start" : "218 BCE",
       "end"   : "201 BCE",
       "color" : "#EE1111",
-      "tags"  : ["war"]
+      "tags"  : ["war"],
+      "file"  : "descrs/second_punic_war.html"
     },
     {
       "name"  : "First Macedonian War",
@@ -460,7 +459,14 @@ var eventsInfo = {
       "start" : "107 BCE",
       "end"   : "100 BCE",
       "color" : "blue",
-      "descr" : "Marius was consul an unprecedented seven times during 107, 104-100, and 86 BC."
+      "file"  : "descrs/marius.html"
+    },
+    {
+      "name"  : "Second Servile War",
+      "start" : "104 BCE",
+      "end"   : "100 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Social War",
@@ -468,41 +474,29 @@ var eventsInfo = {
       "end"   : "87 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+      "file"  : "descrs/social_war.html"
     },
     {
-      "name"  : "First Mithridatic War",
+      "name"  : "Mithridatic Wars",
       "start" : "89 BCE",
-      "end"   : "85 BCE",
+      "end"   : "63 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+      "file"  : "descrs/mithridatic_wars.html"
     },
     {
       "name"  : "Sulla",
       "start" : "88 BCE",
       "end"   : "79 BCE",
       "color" : "blue",
+      "file"  : "descrs/sulla.html"
     },
     {
-      "name"  : "Second Mithridatic War",
-      "start" : "83 BCE",
-      "end"   : "81 BCE",
-      "color" : "#EE1111",
-      "tags"  : ["war"]
-    },
-    {
-      "name"  : "Third Servile War",
+      "name"  : "Spartican Revolt",
       "start" : "73 BCE",
       "end"   : "71 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
-    },
-
-    {
-      "name"  : "Third Mithridatic War",
-      "start" : "73 BCE",
-      "end"   : "63 BCE",
-      "color" : "#EE1111",
-      "tags"  : ["war"]
     },
     {
       "name"  : "First Triumvirate",
@@ -517,6 +511,13 @@ var eventsInfo = {
       "end"   : "50 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+    },
+    {
+      "name"  : "Caesar's Civil War",
+      "start" : "49 BCE",
+      "end"   : "45 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
     },
     {
       "name"  : "Second Triumvirate",
@@ -838,13 +839,13 @@ var eventsInfo = {
     {
       "name"  : "EARLY REPUBLIC",
       "start" : "509 BCE",
-      "end"   : "280 BCE",
+      "end"   : "201 BCE",
       "color" : "rgba(255, 100, 0, 0.5)",
       "tags"  : ["5way"]
     },
     {
       "name"  : "LATE REPUBLIC",
-      "start" : "280 BCE",
+      "start" : "201 BCE",
       "end"   : "27 BCE",
       "color" : "rgba(255, 0, 100, 0.5)",
       "tags"  : ["5way"]
@@ -934,7 +935,7 @@ var eventsInfo = {
       "name"  : "Classical Latin",
       "icon"  : "https://upload.wikimedia.org/wikipedia/commons/b/b7/Rome_Colosseum_inscription_2.jpg",
       "width" : 55,
-      "when"  : "110 BCE",
+      "when"  : "25 CE",
       "ypos"  : 100,
       "file"  : "descrs/classical_latin.html"
     }

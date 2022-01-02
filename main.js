@@ -46,6 +46,7 @@ function init() {
   }
 
   renderInfo.widthPxOrig = renderInfo.widthPx;
+  document.getElementById('3way-input').checked = true;
   redraw();
 }
 
