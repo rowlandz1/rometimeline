@@ -74,9 +74,28 @@ var eventsInfo = {
       "descr" : "Decisive victory against invading Gauls"
     },
     {
+      "name" : "War against Nabis",
+      "when" : "195 BCE",
+      "tags" : ["war"],
+      "descr" : "The Aetolian League, which had fought with Rome in the Second Macedonian War, was\
+      attempting to form an alliance with Sparta and the Selucid Empire. As a preventative measure,\
+      Rome made a move against Sparta under King Nabis, removing them as a dominant power in Greece.\
+      The alliance was prevented, but Greek opinion turned against Rome."
+    },
+    {
+      "name" : "Scipio meets Hannibal",
+      "when" : "193 BCE",
+      "file" : "descrs/meeting_of_hannibal_and_scipio.html"
+    },
+    {
       "name" : "Achaean War",
       "when" : "146 BCE",
-      "tags" : ["war"]
+      "tags" : ["war"],
+      "descr" : "In 146 BCE, the Achaean League rose up in defiance of the Roman occupation of Greece,\
+      but the rebels didn't stand a chance and were crushed. Achaea was incorporated into the\
+      province of Macedonia, but later became its own province. The conflict is notable for ending with\
+      the total destruction of Corinth, demonstrating the brutality and greed of which a Roman army was\
+      capable. The art and wealth of the city was exported back to Rome."
     },
     {
       "name" : "Tiberius Gracchus",
@@ -122,10 +141,6 @@ var eventsInfo = {
     {
       "name" : "Crucifixion of Jesus",
       "when" : "33"
-    },
-    {
-      "name" : "Rome Invades Britain",
-      "when" : "43"
     },
     {
       "name" : "Boudican Revolt",
@@ -302,8 +317,8 @@ var eventsInfo = {
       "color" : "gold"
     },
     {
-      "name"  : "Athenian Golden Age",
-      "start" : "480 BCE",
+      "name"  : "Golden Age of Athenian Democracy",
+      "start" : "478 BCE",
       "end"   : "404 BCE",
       "color" : "cyan"
     },
@@ -404,13 +419,15 @@ var eventsInfo = {
       "end"   : "197 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+      "file"  : "descrs/second_macedonian_war.html"
     },
     {
-      "name"  : "Syrian War",
+      "name"  : "Roman-Seleucid War",
       "start" : "192 BCE",
       "end"   : "188 BCE",
       "color" : "#EE1111",
-      "tags"  : ["war"]
+      "tags"  : ["war"],
+      "file"  : "descrs/roman_seleucid_war.html"
     },
     {
       "name"  : "Third Macedonian War",
@@ -418,6 +435,7 @@ var eventsInfo = {
       "end"   : "168 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+      "file"  : "descrs/third_macedonian_war.html"
     },
     {
       "name"  : "War in Iberia",
@@ -431,7 +449,11 @@ var eventsInfo = {
       "start" : "150 BCE",
       "end"   : "148 BCE",
       "color" : "#EE1111",
-      "tags"  : ["war"]
+      "tags"  : ["war"],
+      "descr" : "The pretender Andriscus united the four Macedonian republics in revolt. But\
+      they were no match for the Roman legions. Recognizing that a hands-off approach to\
+      governing Greece was not going to work, the Senate did away with the tributary republics\
+      and fully encorporated Macedonia as a Roman province."
     },
     {
       "name"  : "Third Punic War",
@@ -439,6 +461,12 @@ var eventsInfo = {
       "end"   : "146 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"],
+      "descr" : "The treaty after the Second Punic War established a border between Carthage and\
+      Numidia. Neither side was allowed to encroach on the other's territory, punishable by Rome.\
+      However, incursions into Carthaginian territory by the Numidians, by far on friendlier terms\
+      with Rome, were largely ignored. The Carthaginians decided to raise an army to defend\
+      themselves, but doing so was also a violation of the treaty. This simply gave the Romans an\
+      excuse to wipe them out."
     },
     {
       "name"  : "First Servile War",
@@ -451,6 +479,13 @@ var eventsInfo = {
       "name"  : "War with Jugurtha",
       "start" : "118 BCE",
       "end"   : "106 BCE",
+      "color" : "#EE1111",
+      "tags"  : ["war"]
+    },
+    {
+      "name"  : "Cimbrian War",
+      "start" : "113 BCE",
+      "end"   : "101 BCE",
       "color" : "#EE1111",
       "tags"  : ["war"]
     },
@@ -558,6 +593,12 @@ var eventsInfo = {
       "end"   : "54",
       "color" : "#7851A9",
       "tags"  : ["emperor"],
+    },
+    {
+      "name"  : "Conquest of Britain",
+      "start" : "43 CE",
+      "end"   : "96 CE",
+      "color" : "#EE1111"
     },
     {
       "name"  : "Nero",
