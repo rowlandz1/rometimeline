@@ -15,7 +15,7 @@ var timespan = eventsInfo.end - eventsInfo.start;
 // set by user interaction
 var stretch = 1.0;
 var visibleGroups = ["rulers", undefined];
-var visibleTags = ["emperor", "war"];
+var visibleTags = ["emperor", "foreign", "war"];
 var visibleEras = "3way";
 
 function init() {
@@ -394,6 +394,8 @@ function userSettingChanged() {
   visibleTags = [];
   if (document.getElementById("emperor-checkbox").checked) visibleTags.push("emperor");
   if (document.getElementById("war-checkbox").checked) visibleTags.push("war");
+  if (document.getElementById("foreign-checkbox").checked) visibleTags.push("foreign");
+
 
   visibleEras = document.querySelector("input[name=eras]:checked").value;
 

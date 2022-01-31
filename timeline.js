@@ -18,7 +18,22 @@ var eventsInfo = {
     {
       "name" : "Founding of Byzantium",
       "when" : "657 BCE",
+      "tags" : ["foreign"],
       "file": "descrs/founding_of_byzantium.html"
+    },
+    {
+      "name" : "Solonian Reforms",
+      "when" : "594 BCE",
+      "tags" : ["foreign"],
+      "descr" : "A century before the Athenian Revolution, the seeds of democracy in the Greek\
+      city-state of Athens were being planted by the political reformer Solon.\
+      He used his power as archon (the chief executive position in Athens)\
+      to address the growing problems of wealth inequality and debt-bondage. His reforms\
+      attempted to establish a \"middle class\" of Athenians who were sufficiently prosperous\
+      that could fill the ranks of the army and wouldn't revolt against the ruling oligarchs.\
+      Written law and rudimentary civic rights were introduced for the first time. It is possible\
+      that the reforms entered the Roman consciousness through Magna Graecia and influenced the\
+      construction of the Twelve Tables."
     },
     {
       "name" : "Founding of the Republic",
@@ -179,7 +194,8 @@ var eventsInfo = {
     },
     {
       "name" : "Sassanid Empire",
-      "when" : "224"
+      "when" : "224",
+      "tags" : ["foreign"]
     },
     {
       "name" : "Year of Six Emperors",
@@ -187,7 +203,8 @@ var eventsInfo = {
     },
     {
       "name" : "Death of Mani",
-      "when" : "277"
+      "when" : "277",
+      "tags" : ["foreign"]
     },
     {
       "name" : "Battle of the Milvian Bridge",
@@ -251,6 +268,7 @@ var eventsInfo = {
     {
       "name" : "Vandal Kingdom Established",
       "when" : "439",
+      "tags" : ["foreign"],
       "descr" : "Having been previously awarded land in Numidia in 435, the opportunistic\
       Vandals under Genseric marched into the province of Africa and captured the city of\
       Carthage. Genseric declared himself the king of a new Vandal Kingdom and embraced the\
@@ -270,7 +288,8 @@ var eventsInfo = {
     },
     {
       "name" : "Birth of Muhammad",
-      "when" : "570 CE"
+      "when" : "570 CE",
+      "tags" : ["foreign"]
     }
   ],
   "intervalEvents"  : [
@@ -317,10 +336,12 @@ var eventsInfo = {
       "color" : "gold"
     },
     {
-      "name"  : "Golden Age of Athenian Democracy",
-      "start" : "478 BCE",
+      "name"  : "Athenian Democracy",
+      "start" : "508 BCE",
       "end"   : "404 BCE",
-      "color" : "cyan"
+      "color" : "cyan",
+      "tags" : ["foreign"],
+      "file"  : "descrs/athenian_democracy.html"
     },
     {
       "name"  : "War with Veii",
@@ -358,6 +379,7 @@ var eventsInfo = {
       "start" : "336 BCE",
       "end"   : "323 BCE",
       "color" : "blue",
+      "tags" : ["foreign"],
       "file"  : "descrs/alexander_the_great.html"
     },
     {
@@ -411,7 +433,7 @@ var eventsInfo = {
       "start" : "215 BCE",
       "end"   : "205 BCE",
       "color" : "#EE1111",
-      "tags"  : ["war"]
+      "tags"  : ["foreign", "war"]
     },
     {
       "name"  : "Second Macedonian War",
@@ -851,6 +873,7 @@ var eventsInfo = {
       "start" : "493 CE",
       "end"   : "526 CE",
       "color" : "orange",
+      "tags" : ["foreign"],
       "descr" : "Theodoric ruled as the King of the Ostrogoths from 475 and as King of Italy from\
       493"
     },
